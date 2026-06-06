@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STP Quiz · Quiz educativo sobre São Tomé e Príncipe</title>
+  <meta name="description" content="Aplicação móvel educativa sobre São Tomé e Príncipe. História, geografia, cultura, gastronomia, línguas e música — em quizzes organizados por nível e por tema. Grátis, sem anúncios, funciona offline." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="STP Quiz · Quiz educativo sobre São Tomé e Príncipe" />
+  <meta property="og:description" content="Aprende sobre São Tomé e Príncipe com quizzes. Grátis, sem anúncios, funciona offline." />
+  <meta property="og:url" content="https://vagnerbomjesus.github.io/stp.quiz/" />
+  <meta property="og:image" content="https://vagnerbomjesus.github.io/stp.quiz/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0F0F18" />
+
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Poppins (mesmo da app) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Design tokens (sincronizados com lib/core/app_palette.dart) ─── */
+    :root {
+      --brand-primary:    #8257E5;
+      --brand-secondary:  #57B6E5;
+      --brand-green:      #04D361;
+      --bg:               #0F0F18;
+      --surface:          #1B1B28;
+      --surface-variant:  #252535;
+      --title:            #EAEAF0;
+      --subtitle:         #B3B0BD;
+      --caption:          #7C7A8A;
+      --border:           #2E2E3C;
+      --shadow-brand:     0 20px 60px -20px rgba(130, 87, 229, 0.45);
+      --radius-lg:        20px;
+      --radius-xl:        28px;
+      --max-w:            1120px;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--title);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ─── Container ─── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Nav ─── */
+    nav.top {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(15, 15, 24, 0.7);
+      border-bottom: 1px solid rgba(46, 46, 60, 0.5);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .brand img { width: 36px; height: 36px; border-radius: 8px; }
+    .brand .dot { color: var(--brand-green); }
+    .brand .underscore {
+      color: var(--brand-green);
+      font-weight: 800;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--subtitle);
+    }
+    .nav-links a:hover { color: var(--title); }
+    .nav-links .github {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+    .nav-links .github:hover {
+      border-color: var(--brand-primary);
+      color: var(--title);
+    }
+    @media (max-width: 700px) {
+      .nav-links a:not(.github) { display: none; }
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      position: relative;
+      padding: 80px 0 120px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: -50% -20% auto;
+      height: 700px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(87, 182, 229, 0.18) 0%,
+        rgba(130, 87, 229, 0.22) 35%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-logo {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 32px;
+      border-radius: 26px;
+      box-shadow: var(--shadow-brand);
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      max-width: 800px;
+      margin: 0 auto 24px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p.sub {
+      font-size: 18px;
+      color: var(--subtitle);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+      color: white;
+      box-shadow: var(--shadow-brand);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 70px -20px rgba(130, 87, 229, 0.6);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--title);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      border-color: var(--brand-primary);
+      background: rgba(130, 87, 229, 0.08);
+    }
+
+    /* ─── Pillars ─── */
+    .pillars {
+      padding: 40px 0 100px;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 720px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+    }
+    .pillar {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .pillar:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand-primary);
+    }
+    .pillar .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(130, 87, 229, 0.18);
+      color: var(--brand-primary);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .pillar h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .pillar p {
+      color: var(--subtitle);
+      font-size: 14px;
+    }
+
+    /* ─── Section ─── */
+    section.feature {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-secondary);
+      margin-bottom: 12px;
+    }
+    h2.section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+    p.section-sub {
+      color: var(--subtitle);
+      font-size: 17px;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    /* ─── Categories grid ─── */
+    .cats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 720px) {
+      .cats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .cat {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: transform 0.2s;
+    }
+    .cat:hover { transform: translateY(-3px); }
+    .cat .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .cat h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .cat p {
+      font-size: 12px;
+      color: var(--caption);
+    }
+
+    /* ─── Levels chips ─── */
+    .levels-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .chip {
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid;
+    }
+    .chip.easy   { color: #6363DB; background: rgba(99,99,219,.10); border-color: rgba(99,99,219,.30); }
+    .chip.medium { color: #03AB4F; background: rgba(3,171,79,.10); border-color: rgba(3,171,79,.30); }
+    .chip.hard   { color: #E8891C; background: rgba(232,137,28,.10); border-color: rgba(232,137,28,.30); }
+    .chip.expert { color: #CC3750; background: rgba(204,55,80,.10); border-color: rgba(204,55,80,.30); }
+
+    /* ─── Two-column layout ─── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .two-col { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    /* ─── Showcase visual mock ─── */
+    .phone-mock {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 9 / 18;
+      margin: 0 auto;
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+      padding: 14px;
+      box-shadow: var(--shadow-brand);
+      position: relative;
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      background: var(--bg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      overflow: hidden;
+    }
+    .mock-card {
+      padding: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .mock-card .top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .mock-card .pill {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: rgba(130,87,229,.18);
+      color: var(--brand-primary);
+      display: grid; place-items: center;
+      font-size: 16px;
+    }
+    .mock-card .title {
+      font-size: 13px; font-weight: 700;
+    }
+    .mock-card .bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .mock-card .bar > i {
+      display: block;
+      height: 100%;
+      background: var(--brand-green);
+    }
+    .mock-card .meta {
+      font-size: 11px;
+      color: var(--caption);
+      margin-bottom: 6px;
+    }
+
+    /* ─── Color picker visual ─── */
+    .color-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .swatch {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .swatch:hover { transform: scale(1.1); border-color: var(--title); }
+
+    /* ─── About author ─── */
+    .author-card {
+      padding: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    @media (max-width: 600px) {
+      .author-card { flex-direction: column; text-align: center; padding: 28px; }
+    }
+    .author-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
+      flex-shrink: 0;
+    }
+    .author-card h3 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .author-card .role {
+      color: var(--brand-secondary);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .author-card p {
+      color: var(--subtitle);
+      font-size: 15px;
+    }
+
+    /* ─── FAQ ─── */
+    .faq {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--title);
+      font-size: 17px;
+      font-weight: 600;
+      padding: 22px 0;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-q .plus {
+      font-size: 22px;
+      color: var(--brand-primary);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .faq-q .plus { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--subtitle);
+      font-size: 15px;
+    }
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      padding-bottom: 22px;
+    }
+
+    /* ─── Final CTA ─── */
+    .cta-final {
+      padding: 100px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .cta-final h2 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .cta-final p {
+      font-size: 17px;
+      color: var(--subtitle);
+      max-width: 540px;
+      margin: 0 auto 32px;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      color: var(--caption);
+      font-size: 13px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a:hover { color: var(--title); }
+
+    /* ─── Utilities ─── */
+    .heart { color: var(--brand-green); }
+  </style>
+</head>
+<body>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- NAV                                                                  -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <nav class="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <img src="images/logo.png" alt="STP Quiz logo" />
+        <span>STP<span class="dot"> • </span>Quiz<span class="underscore">_</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Funcionalidades</a>
+        <a href="#author">Autor</a>
+        <a href="#faq">FAQ</a>
+        <a class="github" href="https://github.com/VagnerBomJesus/stp.quiz" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.9 18.6.5 12 .5z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- HERO                                                                 -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="hero" id="top">
+    <div class="container hero-content">
+      <img class="hero-logo" src="images/logo.png" alt="STP Quiz" />
+      <h1>
+        Descobre <span class="accent">São Tomé e Príncipe</span><br />
+        sem precisar de outra app.
+      </h1>
+      <p class="sub">
+        Quiz educativo sobre história, geografia, cultura, gastronomia,
+        línguas e música do arquipélago. Grátis, sem anúncios,
+        funciona offline.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=st.stpquiz.bjtech" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 20.5V3.5c0-.6.3-1.2.8-1.5l11.4 9.4c.4.3.4 1 0 1.3L3.8 22.1c-.5-.4-.8-1-.8-1.6zM14.3 12L4.4 3.6l11.7 6.7-1.8 1.7zm0 0l1.8 1.7-11.7 6.7L14.3 12zm6.2-3.5l-3.2 1.8 2.2 2.1-2.2 2.1 3.2 1.8c.8-.4 1.3-1.2 1.3-2.1V10.6c0-1-.5-1.7-1.3-2.1z"/>
+          </svg>
+          Em breve na Google Play
+        </a>
+        <a class="btn btn-ghost" href="#features">Ver funcionalidades</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- PILLARS                                                              -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="pillars container">
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="icon">🔒</div>
+        <h3>Privacidade primeiro</h3>
+        <p>Sem recolha de dados pessoais. O progresso fica no teu dispositivo, nada vai para servidores externos.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">💰</div>
+        <h3>Totalmente gratuita</h3>
+        <p>Sem anúncios, sem compras dentro da app, sem subscrição. Apenas conhecimento.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">📶</div>
+        <h3>Funciona offline</h3>
+        <p>Depois do primeiro arranque, joga em qualquer lado — não precisas de ligação à internet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FEATURE — Categorias                                                 -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="feature" id="features">
+    <div class="container">
+      <span class="section-eyebrow">Conteúdo</span>
+      <h2 class="section-title">Seis temas, quatro níveis, uma ilha cheia de história.</h2>
+      <p class="section-sub">Cada tema tem perguntas e uma página educativa dedicada. Desbloqueia tudo desde o primeiro toque.</p>
+
+      <div class="cats-grid">
+        <div class="cat">
+          <div class="icon" style="background:rgba(130,87,229,.18); color:#8257E5;">📖</div>
+          <h4>História de STP</h4>
+          <p>Da chegada portuguesa à independência em 1975.</p>
+        </div>
+        <div class="cat">
+          <div class="icon" style="background:rgba(3,171,79,.18); color:#03AB4F;">🗺️</div>
+          <h4>Geografia</h4>
+          <p>Duas ilhas vulcânicas sobre o Equador.</p>
+        </div>
+        <div class="cat">
+          <div class="icon" style="background:rgba(232,137,28,.18); color:#E8891C;">🎭</div>
+          <h4>Cultura</h4>
+          <p>Identidade crioula entre África e a Europa.</p>
+        </div>
+        <div class="cat">
+          <div class="icon" style="background:rgba(204,55,80,.18); color:#CC3750;">🍲</div>
+          <h4>Gastronomia</h4>
+          <p>Sabores tropicais entre o mar e a floresta.</p>
+        </div>
+        <div class="cat">
+          <div class="icon" style="background:rgba(99,99,219,.18); color:#6363DB;">🗣️</div>
+          <h4>Línguas</h4>
+          <p>Português e crioulos locais convivem no dia a dia.</p>
+        </div>
+        <div class="cat">
+          <div class="icon" style="background:rgba(87,182,229,.18); color:#57B6E5;">🎵</div>
+          <h4>Música</h4>
+          <p>Ritmos tradicionais entre festa e memória.</p>
+        </div>
+      </div>
+
+      <div class="levels-row">
+        <span class="chip easy">Fácil</span>
+        <span class="chip medium">Médio</span>
+        <span class="chip hard">Difícil</span>
+        <span class="chip expert">Perito</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FEATURE — Personalização                                             -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="feature">
+    <div class="container two-col">
+      <div>
+        <span class="section-eyebrow">Personalização</span>
+        <h2 class="section-title">A tua app, com as tuas cores.</h2>
+        <p class="section-sub">
+          Tema claro, escuro ou seguir o sistema. Português, inglês ou
+          francês. E se quiseres ir mais longe, define a tua própria cor
+          primária e secundária.
+        </p>
+        <div class="color-row">
+          <div class="swatch" style="background:#8257E5;" title="Roxo (default)"></div>
+          <div class="swatch" style="background:#57B6E5;" title="Azul (default)"></div>
+          <div class="swatch" style="background:#04D361;" title="Verde"></div>
+          <div class="swatch" style="background:#E8891C;" title="Laranja"></div>
+          <div class="swatch" style="background:#CC3750;" title="Vermelho"></div>
+          <div class="swatch" style="background:#6363DB;" title="Azul-violeta"></div>
+          <div class="swatch" style="background:#E91E63;" title="Rosa"></div>
+          <div class="swatch" style="background:#009688;" title="Teal"></div>
+        </div>
+      </div>
+
+      <!-- Phone mock with home progress card -->
+      <div class="phone-mock">
+        <div class="phone-screen">
+          <div class="mock-card" style="background:linear-gradient(135deg,#57B6E5,#8257E5); border:none;">
+            <div class="title" style="color:white; font-size:14px;">Vamos começar</div>
+            <div class="meta" style="color:rgba(255,255,255,.85); margin-top:4px;">Complete os desafios e avance em conhecimento</div>
+          </div>
+          <div class="mock-card">
+            <div class="top">
+              <div class="pill">📖</div>
+              <div>
+                <div class="title">História de STP</div>
+                <div class="meta" style="margin:0;">Fácil</div>
+              </div>
+            </div>
+            <div class="meta">2 de 5</div>
+            <div class="bar"><i style="width:40%;"></i></div>
+          </div>
+          <div class="mock-card">
+            <div class="top">
+              <div class="pill" style="background:rgba(232,137,28,.22); color:#E8891C;">🍲</div>
+              <div>
+                <div class="title">Gastronomia</div>
+                <div class="meta" style="margin:0;">Médio</div>
+              </div>
+            </div>
+            <div class="meta">1 de 4</div>
+            <div class="bar"><i style="width:25%;"></i></div>
+          </div>
+          <div class="mock-card">
+            <div class="top">
+              <div class="pill" style="background:rgba(87,182,229,.22); color:#57B6E5;">🎵</div>
+              <div>
+                <div class="title">Música</div>
+                <div class="meta" style="margin:0;">Perito</div>
+              </div>
+            </div>
+            <div class="meta">0 de 3</div>
+            <div class="bar"><i style="width:0%;"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FEATURE — Factos & Números                                           -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="feature">
+    <div class="container">
+      <span class="section-eyebrow">Factos &amp; Números</span>
+      <h2 class="section-title">Quinze dados-chave sobre o país.</h2>
+      <p class="section-sub">Para começar com contexto: localização, área, população, capital, ponto mais alto e mais.</p>
+
+      <div class="cats-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">DESIGNAÇÃO OFICIAL</div>
+          <h4 style="margin-top:6px;">Rep. Democrática de STP</h4>
+        </div>
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">INDEPENDÊNCIA</div>
+          <h4 style="margin-top:6px;">12 de julho de 1975</h4>
+        </div>
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">PONTO MAIS ALTO</div>
+          <h4 style="margin-top:6px;">Pico de São Tomé · 2.024 m</h4>
+        </div>
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">FUSO HORÁRIO</div>
+          <h4 style="margin-top:6px;">UTC (GMT)</h4>
+        </div>
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">LÍNGUA OFICIAL</div>
+          <h4 style="margin-top:6px;">Português</h4>
+        </div>
+        <div class="cat">
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">CÓDIGO DO PAÍS</div>
+          <h4 style="margin-top:6px;">+239</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- AUTHOR                                                               -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="feature" id="author">
+    <div class="container">
+      <span class="section-eyebrow">Sobre o autor</span>
+      <h2 class="section-title">Construída com cuidado, por um só.</h2>
+      <div class="author-card">
+        <img class="author-avatar" src="images/vagnerbomjesus.png" alt="Vagner Bom Jesus" onerror="this.style.display='none'" />
+        <div>
+          <h3>Vagner Bom Jesus</h3>
+          <div class="role">Programador · Autor da aplicação</div>
+          <p>
+            A STP Quiz é um projeto pessoal para divulgar São Tomé e
+            Príncipe e, ao mesmo tempo, aplicar e aprofundar conhecimentos
+            em desenvolvimento móvel com Flutter. Construída como produto
+            independente, com cuidado nos detalhes de design e privacidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FAQ                                                                  -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="feature" id="faq">
+    <div class="container">
+      <span class="section-eyebrow">Perguntas frequentes</span>
+      <h2 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto;">As perguntas que toda a gente faz</h2>
+      <div class="faq" style="margin-top:48px;">
+
+        <div class="faq-item">
+          <button class="faq-q">A aplicação é mesmo gratuita? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Sim. Sem subscrições, sem compras dentro da app e sem anúncios. Tudo o que vês está disponível desde o primeiro arranque.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Preciso de internet para jogar? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Não. O conteúdo é local e funciona offline depois da primeira abertura. Só precisas de internet para o download inicial da Play Store.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Onde fica guardado o meu progresso? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Apenas no teu dispositivo, através do mecanismo de preferências locais do Android (SharedPreferences). Nada é enviado para servidores externos.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Em que línguas está disponível? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Português, inglês e francês — ou a língua do sistema, por defeito. A escolha é trocada dentro da app, em Definições.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Posso sugerir uma nova pergunta ou correção? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Sim! Envia para <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — sempre que possível com a fonte para a informação poder ser validada.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Como apago todo o meu progresso? <span class="plus">+</span></button>
+          <div class="faq-a"><p>Dentro da app vai a Definições &gt; Limpar Cache. A acção remove todos os resultados guardados.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FINAL CTA                                                            -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Descobre <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé e Príncipe</span> hoje.</h2>
+      <p>Grátis, sem anúncios e sem dados pessoais. Apenas conhecimento sobre um dos países mais bonitos do Golfo da Guiné.</p>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=st.stpquiz.bjtech" target="_blank" rel="noopener">
+        Em breve na Google Play
+      </a>
+    </div>
+  </section>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- FOOTER                                                               -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        Feito com <span class="heart">♥</span> por
+        <a href="mailto:vagneripg@gmail.com" style="color:var(--title); font-weight:600;">Vagner Bom Jesus</a>
+        · © <span id="year">2026</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md" target="_blank" rel="noopener">Privacidade</a>
+        <a href="https://github.com/VagnerBomJesus/stp.quiz" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:vagneripg@gmail.com">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano dinâmico no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        // Fecha todos
+        document.querySelectorAll('.faq-item.open').forEach((i) => i.classList.remove('open'));
+        // Abre o tocado, se não estava aberto
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
