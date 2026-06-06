@@ -23,6 +23,8 @@
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max-w);margin:0 auto}
     .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--title);text-decoration:none}
     .brand img{width:36px;height:36px;border-radius:8px}
+    .brand .dot{color:#04D361}
+    .brand .underscore{color:#04D361;font-weight:800}
     .lang-switch{display:flex;gap:4px}
     .lang-btn{background:none;border:1px solid var(--border);color:var(--caption);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s}
     .lang-btn:hover{color:var(--title);border-color:var(--brand-primary)}
@@ -52,7 +54,7 @@
     <div class="nav-inner">
       <a class="brand" href="index.html">
         <img src="images/logo.png" alt="STP Quiz" />
-        <span>STP Quiz</span>
+        <span>STP<span class="dot"> • </span>Quiz<span class="underscore">_</span></span>
       </a>
       <div class="lang-switch">
         <button class="lang-btn active" data-lang="en">EN</button>
