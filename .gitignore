@@ -1,0 +1,71 @@
+# ─── Aplicação principal (repo privado separado) ─────────────────────────
+quizstp/
+
+# ─── Miscellaneous ──────────────────────────────────────────────────────
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ─── IDEs ───────────────────────────────────────────────────────────────
+*.iml
+*.ipr
+*.iws
+.idea/
+# .vscode/  # descomenta se NÃO quiseres versionar a config do VS Code
+
+# ─── Flutter / Dart / Pub ───────────────────────────────────────────────
+**/doc/api/
+**/ios/Flutter/.last_build_id
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/build/
+**/coverage/
+
+# ─── Símbolos e ofuscação ──────────────────────────────────────────────
+app.*.symbols
+app.*.map.json
+
+# ─── Android ────────────────────────────────────────────────────────────
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+**/android/.gradle/
+**/android/captures/
+**/android/local.properties
+**/android/gradlew
+**/android/gradlew.bat
+**/android/gradle/wrapper/gradle-wrapper.jar
+**/android/key.properties
+**/android/*.jks
+**/android/*.keystore
+
+# ─── iOS / macOS ────────────────────────────────────────────────────────
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/App.framework/
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/flutter_export_environment.sh
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
+
+# ─── Windows / Linux build outputs ──────────────────────────────────────
+**/windows/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# ─── Web ────────────────────────────────────────────────────────────────
+**/web/build/
