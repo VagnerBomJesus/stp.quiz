@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - STP Quiz</title>
+  <meta name="description" content="Privacy Policy for STP Quiz - Educational quiz about Sao Tome and Principe." />
+  <meta name="theme-color" content="#0F0F18" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand-primary:#8257E5;--brand-secondary:#57B6E5;--bg:#0F0F18;--surface:#1B1B28;--title:#EAEAF0;--subtitle:#B3B0BD;--caption:#7C7A8A;--border:#2E2E3C;--max-w:800px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--subtitle);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand-secondary);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Nav */
+    nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(15,15,24,.7);border-bottom:1px solid rgba(46,46,60,.5)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max-w);margin:0 auto}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--title);text-decoration:none}
+    .brand img{width:36px;height:36px;border-radius:8px}
+    .lang-switch{display:flex;gap:4px}
+    .lang-btn{background:none;border:1px solid var(--border);color:var(--caption);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s}
+    .lang-btn:hover{color:var(--title);border-color:var(--brand-primary)}
+    .lang-btn.active{background:var(--brand-primary);border-color:var(--brand-primary);color:#fff}
+
+    /* Content */
+    .container{max-width:var(--max-w);margin:0 auto;padding:60px 24px 80px}
+    h1{font-size:clamp(28px,5vw,40px);font-weight:800;color:var(--title);line-height:1.1;margin-bottom:8px}
+    .updated{font-size:13px;color:var(--caption);margin-bottom:40px}
+    h2{font-size:18px;font-weight:700;color:var(--title);margin:36px 0 12px;padding-top:20px;border-top:1px solid var(--border)}
+    h2:first-of-type{border-top:none;padding-top:0}
+    p{margin-bottom:16px}
+    ul{margin:0 0 16px 20px}
+    ul li{margin-bottom:8px}
+    .contact-box{margin-top:40px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
+    .contact-box h3{color:var(--title);font-size:16px;margin-bottom:8px}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--caption);font-size:13px}
+    footer a{color:var(--subtitle)}
+    .links{display:flex;gap:20px;justify-content:center;margin-top:8px}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="STP Quiz" />
+        <span>STP Quiz</span>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 data-i18n="title">Privacy Policy</h1>
+    <div class="updated" data-i18n="updated">Last updated: June 2026</div>
+
+    <h2 data-i18n="s1.title">1. Introduction</h2>
+    <p data-i18n="s1.body">This Privacy Policy describes how the STP Quiz application processes information related to its use. The goal is to give the user transparency about what is (or is not) collected, on what basis and for how long.</p>
+
+    <h2 data-i18n="s2.title">2. Data Controller</h2>
+    <p data-i18n="s2.body">For the purposes of Law No. 3/2016 of 18 February (Personal Data Protection Law of the Democratic Republic of S&atilde;o Tom&eacute; and Pr&iacute;ncipe) and Regulation (EU) 2016/679 (GDPR), the data controller is the STP Quiz development team, reachable at <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.</p>
+
+    <h2 data-i18n="s3.title">3. Minimization Principle</h2>
+    <p data-i18n="s3.body">STP Quiz was designed from the ground up to process the minimum information needed to function. As a general rule, the application does not collect personally identifiable data nor communicate information to external servers.</p>
+
+    <h2 data-i18n="s4.title">4. Data Processed</h2>
+    <p data-i18n="s4.intro">The application stores locally, on the device itself, the following data:</p>
+    <ul>
+      <li data-i18n="s4.item1">Quiz progress (number of correct answers per category);</li>
+      <li data-i18n="s4.item2">Usage preferences (for example, the selected level filter).</li>
+    </ul>
+    <p data-i18n="s4.note">This data is stored through the operating system's local preferences mechanism and is never transmitted outside.</p>
+
+    <h2 data-i18n="s5.title">5. Purposes of Processing</h2>
+    <p data-i18n="s5.intro">The data above is processed only to:</p>
+    <ul>
+      <li data-i18n="s5.item1">Allow the user to resume quizzes where they left off;</li>
+      <li data-i18n="s5.item2">Show overall progress on the home screen.</li>
+    </ul>
+
+    <h2 data-i18n="s6.title">6. Legal Basis</h2>
+    <p data-i18n="s6.body">The described processing is based on the user's implicit consent, expressed through installation and use of the app, and on the legitimate interest of providing a functional and continuous experience. The user can revoke this consent at any time by deleting the data through the "Clear Cache" option or by uninstalling the app.</p>
+
+    <h2 data-i18n="s7.title">7. Data Retention</h2>
+    <p data-i18n="s7.body">Data is kept while the application is installed. Deletion is immediate when the user taps "Clear Cache" or uninstalls the application. There are no remote copies, cloud backups or server logs.</p>
+
+    <h2 data-i18n="s8.title">8. No Sharing with Third Parties</h2>
+    <p data-i18n="s8.body">STP Quiz does not sell, rent or make information available to third parties, including advertising partners, analytics tools or marketing platforms. The application includes no ad networks or behavioral trackers.</p>
+
+    <h2 data-i18n="s9.title">9. Security</h2>
+    <p data-i18n="s9.body">Data is protected by the operating system's isolated storage mechanisms (application sandbox). Users are encouraged to adopt suitable device security practices, such as PIN or biometric lock.</p>
+
+    <h2 data-i18n="s10.title">10. International Transfers</h2>
+    <p data-i18n="s10.body">No international data transfers occur, since processing takes place exclusively on the user's device.</p>
+
+    <h2 data-i18n="s11.title">11. Rights of the Data Subject</h2>
+    <p data-i18n="s11.intro">In accordance with applicable law, the user has the right to:</p>
+    <ul>
+      <li data-i18n="s11.i1">Information about the data processed;</li>
+      <li data-i18n="s11.i2">Access and copy of the data;</li>
+      <li data-i18n="s11.i3">Rectification of inaccurate information;</li>
+      <li data-i18n="s11.i4">Erasure ("right to be forgotten");</li>
+      <li data-i18n="s11.i5">Limitation of or objection to processing;</li>
+      <li data-i18n="s11.i6">Portability;</li>
+      <li data-i18n="s11.i7">Withdrawal of consent, without retroactive effect;</li>
+      <li data-i18n="s11.i8">Lodging a complaint with the competent supervisory authority.</li>
+    </ul>
+    <p data-i18n="s11.how">To exercise these rights simply use the "Clear Cache" option in Settings or contact <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.</p>
+
+    <h2 data-i18n="s12.title">12. Minors</h2>
+    <p data-i18n="s12.body">The application is intended for a general audience. If used by minors, supervision by the legal guardian is recommended. Since no personally identifiable data is collected, no specific parental consent is requested.</p>
+
+    <h2 data-i18n="s13.title">13. Changes to the Policy</h2>
+    <p data-i18n="s13.body">This Policy may be updated to reflect legal or functional changes. The version in force is the one displayed on this page, identified by the "last updated" date at the top.</p>
+
+    <div class="contact-box">
+      <h3 data-i18n="contact.title">14. Contact</h3>
+      <p data-i18n="contact.body">For any question related to privacy or data protection: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; <span id="year">2026</span> Vagner Bom Jesus</div>
+    <div class="links">
+      <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a href="support.html" data-i18n="footer.support">Support</a>
+      <a href="index.html" data-i18n="footer.home">Home</a>
+    </div>
+  </footer>
+
+  <script>
+    const I18N={
+      en:{
+        'title':'Privacy Policy','updated':'Last updated: June 2026',
+        's1.title':'1. Introduction','s1.body':'This Privacy Policy describes how the STP Quiz application processes information related to its use. The goal is to give the user transparency about what is (or is not) collected, on what basis and for how long.',
+        's2.title':'2. Data Controller','s2.body':'For the purposes of Law No. 3/2016 of 18 February (Personal Data Protection Law of the Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe) and Regulation (EU) 2016/679 (GDPR), the data controller is the STP Quiz development team, reachable at <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's3.title':'3. Minimization Principle','s3.body':'STP Quiz was designed from the ground up to process the minimum information needed to function. As a general rule, the application does not collect personally identifiable data nor communicate information to external servers.',
+        's4.title':'4. Data Processed','s4.intro':'The application stores locally, on the device itself, the following data:','s4.item1':'Quiz progress (number of correct answers per category);','s4.item2':'Usage preferences (for example, the selected level filter).','s4.note':'This data is stored through the operating system\'s local preferences mechanism and is never transmitted outside.',
+        's5.title':'5. Purposes of Processing','s5.intro':'The data above is processed only to:','s5.item1':'Allow the user to resume quizzes where they left off;','s5.item2':'Show overall progress on the home screen.',
+        's6.title':'6. Legal Basis','s6.body':'The described processing is based on the user\'s implicit consent, expressed through installation and use of the app, and on the legitimate interest of providing a functional and continuous experience. The user can revoke this consent at any time by deleting the data through the "Clear Cache" option or by uninstalling the app.',
+        's7.title':'7. Data Retention','s7.body':'Data is kept while the application is installed. Deletion is immediate when the user taps "Clear Cache" or uninstalls the application. There are no remote copies, cloud backups or server logs.',
+        's8.title':'8. No Sharing with Third Parties','s8.body':'STP Quiz does not sell, rent or make information available to third parties, including advertising partners, analytics tools or marketing platforms. The application includes no ad networks or behavioral trackers.',
+        's9.title':'9. Security','s9.body':'Data is protected by the operating system\'s isolated storage mechanisms (application sandbox). Users are encouraged to adopt suitable device security practices, such as PIN or biometric lock.',
+        's10.title':'10. International Transfers','s10.body':'No international data transfers occur, since processing takes place exclusively on the user\'s device.',
+        's11.title':'11. Rights of the Data Subject','s11.intro':'In accordance with applicable law, the user has the right to:','s11.i1':'Information about the data processed;','s11.i2':'Access and copy of the data;','s11.i3':'Rectification of inaccurate information;','s11.i4':'Erasure ("right to be forgotten");','s11.i5':'Limitation of or objection to processing;','s11.i6':'Portability;','s11.i7':'Withdrawal of consent, without retroactive effect;','s11.i8':'Lodging a complaint with the competent supervisory authority.','s11.how':'To exercise these rights simply use the "Clear Cache" option in Settings or contact <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's12.title':'12. Minors','s12.body':'The application is intended for a general audience. If used by minors, supervision by the legal guardian is recommended. Since no personally identifiable data is collected, no specific parental consent is requested.',
+        's13.title':'13. Changes to the Policy','s13.body':'This Policy may be updated to reflect legal or functional changes. The version in force is the one displayed on this page, identified by the "last updated" date at the top.',
+        'contact.title':'14. Contact','contact.body':'For any question related to privacy or data protection: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.terms':'Terms of Use','footer.support':'Support','footer.home':'Home',
+      },
+      pt:{
+        'title':'Pol\u00edtica de Privacidade','updated':'\u00daltima atualiza\u00e7\u00e3o: Junho de 2026',
+        's1.title':'1. Introdu\u00e7\u00e3o','s1.body':'A presente Pol\u00edtica de Privacidade descreve a forma como a aplica\u00e7\u00e3o STP Quiz trata informa\u00e7\u00e3o relacionada com a sua utiliza\u00e7\u00e3o. O objetivo \u00e9 dar transpar\u00eancia ao utilizador sobre o que \u00e9 (ou n\u00e3o \u00e9) recolhido, com que fundamento e durante quanto tempo.',
+        's2.title':'2. Respons\u00e1vel pelo Tratamento','s2.body':'Para os efeitos do disposto na Lei n.\u00ba 3/2016, de 18 de fevereiro (Lei de Prote\u00e7\u00e3o de Dados Pessoais da Rep\u00fablica Democr\u00e1tica de S\u00e3o Tom\u00e9 e Pr\u00edncipe) e no Regulamento (UE) 2016/679 (RGPD), o respons\u00e1vel pelo tratamento \u00e9 a equipa de desenvolvimento da STP Quiz, contact\u00e1vel atrav\u00e9s do email <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's3.title':'3. Princ\u00edpio da Minimiza\u00e7\u00e3o','s3.body':'A STP Quiz foi desenhada de raiz para tratar o m\u00ednimo de informa\u00e7\u00e3o indispens\u00e1vel ao seu funcionamento. Como regra geral, a aplica\u00e7\u00e3o n\u00e3o recolhe dados pessoais identific\u00e1veis nem comunica informa\u00e7\u00e3o com servidores externos.',
+        's4.title':'4. Dados Tratados','s4.intro':'A aplica\u00e7\u00e3o armazena localmente, no pr\u00f3prio dispositivo, os seguintes dados:','s4.item1':'Progresso dos quizzes (n\u00famero de respostas certas por categoria);','s4.item2':'Prefer\u00eancias de utiliza\u00e7\u00e3o (por exemplo, o filtro de n\u00edvel selecionado).','s4.note':'Estes dados s\u00e3o guardados atrav\u00e9s do mecanismo de prefer\u00eancias locais do sistema operativo e nunca s\u00e3o transmitidos para o exterior.',
+        's5.title':'5. Finalidades do Tratamento','s5.intro':'Os dados acima s\u00e3o tratados apenas para:','s5.item1':'Permitir ao utilizador continuar os quizzes onde os deixou;','s5.item2':'Apresentar o progresso global na p\u00e1gina inicial.',
+        's6.title':'6. Base Legal','s6.body':'O tratamento descrito sustenta-se no consentimento impl\u00edcito do utilizador, manifestado atrav\u00e9s da instala\u00e7\u00e3o e utiliza\u00e7\u00e3o da aplica\u00e7\u00e3o, e no interesse leg\u00edtimo de proporcionar uma experi\u00eancia funcional e cont\u00ednua. O utilizador pode revogar este consentimento a qualquer momento, eliminando os dados atrav\u00e9s da op\u00e7\u00e3o \u201cLimpar Cache\u201d ou desinstalando a aplica\u00e7\u00e3o.',
+        's7.title':'7. Conserva\u00e7\u00e3o dos Dados','s7.body':'Os dados s\u00e3o mantidos enquanto a aplica\u00e7\u00e3o estiver instalada. A elimina\u00e7\u00e3o \u00e9 imediata quando o utilizador toca em \u201cLimpar Cache\u201d ou desinstala a aplica\u00e7\u00e3o. N\u00e3o existem c\u00f3pias remotas, c\u00f3pias de seguran\u00e7a em nuvem nem registos no servidor.',
+        's8.title':'8. N\u00e3o Partilha com Terceiros','s8.body':'A STP Quiz n\u00e3o vende, aluga nem disponibiliza informa\u00e7\u00e3o a terceiros, incluindo parceiros publicit\u00e1rios, ferramentas de an\u00e1lise ou plataformas de marketing. A aplica\u00e7\u00e3o n\u00e3o inclui redes de publicidade nem rastreadores comportamentais.',
+        's9.title':'9. Seguran\u00e7a','s9.body':'Os dados encontram-se protegidos pelos mecanismos de armazenamento isolado do sistema operativo (sandbox da aplica\u00e7\u00e3o). Recomenda-se ao utilizador a ado\u00e7\u00e3o de pr\u00e1ticas adequadas de seguran\u00e7a no dispositivo, como o uso de bloqueio por c\u00f3digo ou biom\u00e9trico.',
+        's10.title':'10. Transfer\u00eancias Internacionais','s10.body':'N\u00e3o ocorrem transfer\u00eancias internacionais de dados, uma vez que o tratamento decorre exclusivamente no dispositivo do utilizador.',
+        's11.title':'11. Direitos do Titular','s11.intro':'Em conformidade com a legisla\u00e7\u00e3o aplic\u00e1vel, o utilizador tem direito a:','s11.i1':'Informa\u00e7\u00e3o sobre os dados tratados;','s11.i2':'Acesso e c\u00f3pia dos mesmos;','s11.i3':'Retifica\u00e7\u00e3o de informa\u00e7\u00e3o inexata;','s11.i4':'Apagamento (\u201cdireito ao esquecimento\u201d);','s11.i5':'Limita\u00e7\u00e3o ou oposi\u00e7\u00e3o ao tratamento;','s11.i6':'Portabilidade;','s11.i7':'Retirar o consentimento, sem efeito retroativo;','s11.i8':'Apresentar reclama\u00e7\u00e3o \u00e0 autoridade de controlo competente.','s11.how':'Para exercer estes direitos basta usar a op\u00e7\u00e3o \u201cLimpar Cache\u201d nas Defini\u00e7\u00f5es ou contactar <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's12.title':'12. Menores','s12.body':'A aplica\u00e7\u00e3o destina-se a um p\u00fablico geral. Caso seja utilizada por menores, recomenda-se a supervis\u00e3o do encarregado de educa\u00e7\u00e3o. Como n\u00e3o s\u00e3o recolhidos dados pessoais identific\u00e1veis, n\u00e3o \u00e9 solicitado consentimento parental espec\u00edfico.',
+        's13.title':'13. Altera\u00e7\u00f5es \u00e0 Pol\u00edtica','s13.body':'Esta Pol\u00edtica pode ser atualizada para refletir altera\u00e7\u00f5es legais ou funcionais. A vers\u00e3o em vigor \u00e9 a apresentada nesta p\u00e1gina, identificada pela data de \u201c\u00faltima atualiza\u00e7\u00e3o\u201d no topo.',
+        'contact.title':'14. Contacto','contact.body':'Para qualquer quest\u00e3o relacionada com privacidade ou prote\u00e7\u00e3o de dados: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.terms':'Termos de Uso','footer.support':'Suporte','footer.home':'In\u00edcio',
+      },
+      fr:{
+        'title':'Politique de confidentialit\u00e9','updated':'Derni\u00e8re mise \u00e0 jour : juin 2026',
+        's1.title':'1. Introduction','s1.body':'La pr\u00e9sente Politique de confidentialit\u00e9 d\u00e9crit la mani\u00e8re dont l\u2019application STP Quiz traite les informations li\u00e9es \u00e0 son utilisation. L\u2019objectif est d\u2019offrir \u00e0 l\u2019utilisateur de la transparence sur ce qui est (ou n\u2019est pas) collect\u00e9, sur quel fondement et pendant combien de temps.',
+        's2.title':'2. Responsable du traitement','s2.body':'Aux fins de la Loi n\u00b0 3/2016 du 18 f\u00e9vrier (Loi sur la protection des donn\u00e9es personnelles de la R\u00e9publique d\u00e9mocratique de S\u00e3o Tom\u00e9-et-Pr\u00edncipe) et du R\u00e8glement (UE) 2016/679 (RGPD), le responsable du traitement est l\u2019\u00e9quipe de d\u00e9veloppement de STP Quiz, joignable \u00e0 l\u2019adresse <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's3.title':'3. Principe de minimisation','s3.body':'STP Quiz a \u00e9t\u00e9 con\u00e7ue d\u00e8s le d\u00e9part pour traiter le minimum d\u2019informations indispensables \u00e0 son fonctionnement. En r\u00e8gle g\u00e9n\u00e9rale, l\u2019application ne collecte pas de donn\u00e9es personnelles identifiables et ne communique aucune information \u00e0 des serveurs externes.',
+        's4.title':'4. Donn\u00e9es trait\u00e9es','s4.intro':'L\u2019application stocke localement, sur l\u2019appareil lui-m\u00eame, les donn\u00e9es suivantes :','s4.item1':'Progression des quiz (nombre de bonnes r\u00e9ponses par cat\u00e9gorie) ;','s4.item2':'Pr\u00e9f\u00e9rences d\u2019utilisation (par exemple, le filtre de niveau s\u00e9lectionn\u00e9).','s4.note':'Ces donn\u00e9es sont enregistr\u00e9es via le m\u00e9canisme de pr\u00e9f\u00e9rences locales du syst\u00e8me d\u2019exploitation et ne sont jamais transmises \u00e0 l\u2019ext\u00e9rieur.',
+        's5.title':'5. Finalit\u00e9s du traitement','s5.intro':'Les donn\u00e9es ci-dessus sont trait\u00e9es uniquement pour :','s5.item1':'Permettre \u00e0 l\u2019utilisateur de reprendre les quiz l\u00e0 o\u00f9 il les a laiss\u00e9s ;','s5.item2':'Afficher la progression globale sur l\u2019\u00e9cran d\u2019accueil.',
+        's6.title':'6. Base l\u00e9gale','s6.body':'Le traitement d\u00e9crit repose sur le consentement implicite de l\u2019utilisateur, manifest\u00e9 par l\u2019installation et l\u2019utilisation de l\u2019application, et sur l\u2019int\u00e9r\u00eat l\u00e9gitime \u00e0 fournir une exp\u00e9rience fonctionnelle et continue. L\u2019utilisateur peut r\u00e9voquer ce consentement \u00e0 tout moment en supprimant les donn\u00e9es via l\u2019option \u00ab Vider le cache \u00bb ou en d\u00e9sinstallant l\u2019application.',
+        's7.title':'7. Conservation des donn\u00e9es','s7.body':'Les donn\u00e9es sont conserv\u00e9es tant que l\u2019application est install\u00e9e. La suppression est imm\u00e9diate lorsque l\u2019utilisateur touche \u00ab Vider le cache \u00bb ou d\u00e9sinstalle l\u2019application. Il n\u2019existe ni copies distantes, ni sauvegardes cloud, ni journaux sur le serveur.',
+        's8.title':'8. Pas de partage avec des tiers','s8.body':'STP Quiz ne vend, ne loue ni ne met d\u2019informations \u00e0 disposition de tiers, y compris des partenaires publicitaires, des outils d\u2019analyse ou des plateformes de marketing. L\u2019application n\u2019inclut aucun r\u00e9seau publicitaire ni traceurs comportementaux.',
+        's9.title':'9. S\u00e9curit\u00e9','s9.body':'Les donn\u00e9es sont prot\u00e9g\u00e9es par les m\u00e9canismes de stockage isol\u00e9 du syst\u00e8me d\u2019exploitation (sandbox de l\u2019application). Il est recommand\u00e9 \u00e0 l\u2019utilisateur d\u2019adopter des pratiques de s\u00e9curit\u00e9 appropri\u00e9es sur l\u2019appareil, comme l\u2019utilisation d\u2019un verrouillage par code ou biom\u00e9trique.',
+        's10.title':'10. Transferts internationaux','s10.body':'Aucun transfert international de donn\u00e9es n\u2019a lieu, le traitement se d\u00e9roulant exclusivement sur l\u2019appareil de l\u2019utilisateur.',
+        's11.title':'11. Droits de la personne concern\u00e9e','s11.intro':'Conform\u00e9ment \u00e0 la l\u00e9gislation applicable, l\u2019utilisateur a le droit de :','s11.i1':'\u00catre inform\u00e9 des donn\u00e9es trait\u00e9es ;','s11.i2':'Y acc\u00e9der et en obtenir une copie ;','s11.i3':'Demander la rectification d\u2019informations inexactes ;','s11.i4':'Demander l\u2019effacement (\u00ab droit \u00e0 l\u2019oubli \u00bb) ;','s11.i5':'Limiter ou s\u2019opposer au traitement ;','s11.i6':'Portabilit\u00e9 ;','s11.i7':'Retirer le consentement, sans effet r\u00e9troactif ;','s11.i8':'Introduire une r\u00e9clamation aupr\u00e8s de l\u2019autorit\u00e9 de contr\u00f4le comp\u00e9tente.','s11.how':'Pour exercer ces droits, il suffit d\u2019utiliser l\u2019option \u00ab Vider le cache \u00bb dans les Param\u00e8tres ou de contacter <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>.',
+        's12.title':'12. Mineurs','s12.body':'L\u2019application est destin\u00e9e \u00e0 un public g\u00e9n\u00e9ral. Si elle est utilis\u00e9e par des mineurs, la supervision d\u2019un tuteur l\u00e9gal est recommand\u00e9e. Comme aucune donn\u00e9e personnelle identifiable n\u2019est collect\u00e9e, aucun consentement parental sp\u00e9cifique n\u2019est demand\u00e9.',
+        's13.title':'13. Modifications de la politique','s13.body':'Cette Politique peut \u00eatre mise \u00e0 jour pour refl\u00e9ter des changements l\u00e9gaux ou fonctionnels. La version en vigueur est celle pr\u00e9sent\u00e9e sur cette page, identifi\u00e9e par la date de \u00ab derni\u00e8re mise \u00e0 jour \u00bb en haut.',
+        'contact.title':'14. Contact','contact.body':'Pour toute question relative \u00e0 la confidentialit\u00e9 ou \u00e0 la protection des donn\u00e9es : <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.terms':'Conditions d\u2019utilisation','footer.support':'Support','footer.home':'Accueil',
+      }
+    };
+    let lang='en';
+    function setLang(l){lang=l;document.documentElement.lang=l;const s=I18N[l];document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(s[k])e.innerHTML=s[k]});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}
+    document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -9,7 +9,7 @@
 > página pode ser usado no campo "Política de Privacidade" da Google
 > Play Console.
 >
-> URL público: `https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md`
+> URL público: `https://vagnerbomjesus.github.io/stp.quiz/privacy.html`
 
 ---
 

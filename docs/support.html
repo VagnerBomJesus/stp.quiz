@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - STP Quiz</title>
+  <meta name="description" content="Support for STP Quiz - Educational quiz about Sao Tome and Principe." />
+  <meta name="theme-color" content="#0F0F18" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--brand-primary:#8257E5;--brand-secondary:#57B6E5;--bg:#0F0F18;--surface:#1B1B28;--title:#EAEAF0;--subtitle:#B3B0BD;--caption:#7C7A8A;--border:#2E2E3C;--max-w:800px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--subtitle);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand-secondary);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Nav */
+    nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(15,15,24,.7);border-bottom:1px solid rgba(46,46,60,.5)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max-w);margin:0 auto}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--title);text-decoration:none}
+    .brand img{width:36px;height:36px;border-radius:8px}
+    .lang-switch{display:flex;gap:4px}
+    .lang-btn{background:none;border:1px solid var(--border);color:var(--caption);padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s}
+    .lang-btn:hover{color:var(--title);border-color:var(--brand-primary)}
+    .lang-btn.active{background:var(--brand-primary);border-color:var(--brand-primary);color:#fff}
+
+    /* Content */
+    .container{max-width:var(--max-w);margin:0 auto;padding:60px 24px 80px}
+    h1{font-size:clamp(28px,5vw,40px);font-weight:800;color:var(--title);line-height:1.1;margin-bottom:8px}
+    .updated{font-size:13px;color:var(--caption);margin-bottom:40px}
+    h2{font-size:18px;font-weight:700;color:var(--title);margin:36px 0 12px;padding-top:20px;border-top:1px solid var(--border)}
+    h2:first-of-type{border-top:none;padding-top:0}
+    p{margin-bottom:16px}
+    ul{margin:0 0 16px 20px}
+    ul li{margin-bottom:8px}
+    .contact-box{margin-top:40px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
+    .contact-box h3{color:var(--title);font-size:16px;margin-bottom:8px}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--caption);font-size:13px}
+    footer a{color:var(--subtitle)}
+    .links{display:flex;gap:20px;justify-content:center;margin-top:8px}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="STP Quiz" />
+        <span>STP Quiz</span>
+      </a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 data-i18n="title">Support</h1>
+    <div class="updated" data-i18n="updated">Last updated: June 2026</div>
+
+    <h2 data-i18n="s1.title">1. How We Can Help</h2>
+    <p data-i18n="s1.body">The STP Quiz team is available to answer questions, receive suggestions and investigate any issues. The preferred channel is email.</p>
+    <p data-i18n="s1.email">Support email: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a></p>
+
+    <h2 data-i18n="s2.title">2. Before You Contact Us</h2>
+    <p data-i18n="s2.intro">Many requests are resolved in seconds. Check:</p>
+    <ul>
+      <li data-i18n="s2.i1">App doesn't open or is slow &mdash; restart the application;</li>
+      <li data-i18n="s2.i2">Progress seems incorrect &mdash; check Clear Cache;</li>
+      <li data-i18n="s2.i3">A question seems wrong &mdash; report it.</li>
+    </ul>
+
+    <h2 data-i18n="s3.title">3. Requests We Receive</h2>
+    <p data-i18n="s3.body">Questions, Suggestions, Bugs, Content, Privacy and data.</p>
+
+    <h2 data-i18n="s4.title">4. How to Report a Bug</h2>
+    <p data-i18n="s4.intro">Include:</p>
+    <ul>
+      <li data-i18n="s4.i1">Clear description;</li>
+      <li data-i18n="s4.i2">Steps to reproduce;</li>
+      <li data-i18n="s4.i3">Expected behavior;</li>
+      <li data-i18n="s4.i4">Device model and OS version;</li>
+      <li data-i18n="s4.i5">App version;</li>
+      <li data-i18n="s4.i6">Screenshot if possible.</li>
+    </ul>
+
+    <h2 data-i18n="s5.title">5. Content Suggestions and Contributions</h2>
+    <p data-i18n="s5.body">We accept new questions, bibliographic sources and factual corrections.</p>
+
+    <h2 data-i18n="s6.title">6. Response Time</h2>
+    <p data-i18n="s6.body">2 to 5 business days. Data protection requests are prioritized.</p>
+
+    <h2 data-i18n="s7.title">7. Privacy of Requests</h2>
+    <p data-i18n="s7.body">Messages are treated confidentially and not shared with third parties.</p>
+
+    <h2 data-i18n="s8.title">8. Languages</h2>
+    <p data-i18n="s8.body">Portuguese, English and French.</p>
+
+    <div class="contact-box">
+      <h3 data-i18n="contact.title">9. Contact</h3>
+      <p data-i18n="contact.body">Email: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; <span id="year">2026</span> Vagner Bom Jesus</div>
+    <div class="links">
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a href="index.html" data-i18n="footer.home">Home</a>
+    </div>
+  </footer>
+
+  <script>
+    const I18N={
+      en:{
+        'title':'Support','updated':'Last updated: June 2026',
+        's1.title':'1. How We Can Help','s1.body':'The STP Quiz team is available to answer questions, receive suggestions and investigate any issues. The preferred channel is email.','s1.email':'Support email: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        's2.title':'2. Before You Contact Us','s2.intro':'Many requests are resolved in seconds. Check:','s2.i1':'App doesn\u2019t open or is slow \u2014 restart the application;','s2.i2':'Progress seems incorrect \u2014 check Clear Cache;','s2.i3':'A question seems wrong \u2014 report it.',
+        's3.title':'3. Requests We Receive','s3.body':'Questions, Suggestions, Bugs, Content, Privacy and data.',
+        's4.title':'4. How to Report a Bug','s4.intro':'Include:','s4.i1':'Clear description;','s4.i2':'Steps to reproduce;','s4.i3':'Expected behavior;','s4.i4':'Device model and OS version;','s4.i5':'App version;','s4.i6':'Screenshot if possible.',
+        's5.title':'5. Content Suggestions and Contributions','s5.body':'We accept new questions, bibliographic sources and factual corrections.',
+        's6.title':'6. Response Time','s6.body':'2 to 5 business days. Data protection requests are prioritized.',
+        's7.title':'7. Privacy of Requests','s7.body':'Messages are treated confidentially and not shared with third parties.',
+        's8.title':'8. Languages','s8.body':'Portuguese, English and French.',
+        'contact.title':'9. Contact','contact.body':'Email: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.privacy':'Privacy Policy','footer.terms':'Terms of Use','footer.home':'Home',
+      },
+      pt:{
+        'title':'Suporte','updated':'\u00daltima atualiza\u00e7\u00e3o: Junho de 2026',
+        's1.title':'1. Como Podemos Ajudar','s1.body':'A equipa da STP Quiz est\u00e1 dispon\u00edvel para responder a quest\u00f5es, receber sugest\u00f5es e investigar problemas. O canal preferencial \u00e9 o email.','s1.email':'Email de suporte: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        's2.title':'2. Antes de nos Contactar','s2.intro':'Muitos pedidos resolvem-se em segundos. Verifique:','s2.i1':'A aplica\u00e7\u00e3o n\u00e3o abre ou est\u00e1 lenta \u2014 reinicie a aplica\u00e7\u00e3o;','s2.i2':'O progresso parece incorreto \u2014 verifique Limpar Cache;','s2.i3':'Uma pergunta parece errada \u2014 reporte-a.',
+        's3.title':'3. Pedidos que Recebemos','s3.body':'D\u00favidas, Sugest\u00f5es, Erros, Conte\u00fado, Privacidade e dados.',
+        's4.title':'4. Como Reportar um Erro','s4.intro':'Inclua:','s4.i1':'Descri\u00e7\u00e3o clara;','s4.i2':'Passos para reproduzir;','s4.i3':'Comportamento esperado;','s4.i4':'Modelo do dispositivo e vers\u00e3o do SO;','s4.i5':'Vers\u00e3o da aplica\u00e7\u00e3o;','s4.i6':'Captura de ecr\u00e3, se poss\u00edvel.',
+        's5.title':'5. Sugest\u00f5es de Conte\u00fado e Contribui\u00e7\u00f5es','s5.body':'Aceitamos novas perguntas, fontes bibliogr\u00e1ficas e corre\u00e7\u00f5es factuais.',
+        's6.title':'6. Tempo de Resposta','s6.body':'2 a 5 dias \u00fateis. Pedidos de prote\u00e7\u00e3o de dados s\u00e3o priorit\u00e1rios.',
+        's7.title':'7. Privacidade dos Pedidos','s7.body':'As mensagens s\u00e3o tratadas de forma confidencial e n\u00e3o s\u00e3o partilhadas com terceiros.',
+        's8.title':'8. Idiomas','s8.body':'Portugu\u00eas, Ingl\u00eas e Franc\u00eas.',
+        'contact.title':'9. Contacto','contact.body':'Email: <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.privacy':'Pol\u00edtica de Privacidade','footer.terms':'Termos de Uso','footer.home':'In\u00edcio',
+      },
+      fr:{
+        'title':'Support','updated':'Derni\u00e8re mise \u00e0 jour : juin 2026',
+        's1.title':'1. Comment nous pouvons aider','s1.body':'L\u2019\u00e9quipe STP Quiz est disponible pour r\u00e9pondre aux questions, recevoir des suggestions et examiner tout probl\u00e8me. Le canal privil\u00e9gi\u00e9 est l\u2019email.','s1.email':'Email de support : <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        's2.title':'2. Avant de nous contacter','s2.intro':'De nombreuses demandes se r\u00e9solvent en quelques secondes. V\u00e9rifiez :','s2.i1':'L\u2019application ne s\u2019ouvre pas ou est lente \u2014 red\u00e9marrez l\u2019application ;','s2.i2':'La progression semble incorrecte \u2014 v\u00e9rifiez Vider le cache ;','s2.i3':'Une question semble erron\u00e9e \u2014 signalez-la.',
+        's3.title':'3. Demandes que nous recevons','s3.body':'Questions, Suggestions, Bugs, Contenu, Confidentialit\u00e9 et donn\u00e9es.',
+        's4.title':'4. Comment signaler un bug','s4.intro':'Incluez :','s4.i1':'Description claire ;','s4.i2':'\u00c9tapes pour reproduire ;','s4.i3':'Comportement attendu ;','s4.i4':'Mod\u00e8le de l\u2019appareil et version du SE ;','s4.i5':'Version de l\u2019application ;','s4.i6':'Capture d\u2019\u00e9cran si possible.',
+        's5.title':'5. Suggestions de contenu et contributions','s5.body':'Nous acceptons de nouvelles questions, des sources bibliographiques et des corrections factuelles.',
+        's6.title':'6. D\u00e9lai de r\u00e9ponse','s6.body':'2 \u00e0 5 jours ouvrables. Les demandes de protection des donn\u00e9es sont prioritaires.',
+        's7.title':'7. Confidentialit\u00e9 des demandes','s7.body':'Les messages sont trait\u00e9s de mani\u00e8re confidentielle et ne sont pas partag\u00e9s avec des tiers.',
+        's8.title':'8. Langues','s8.body':'Portugais, Anglais et Fran\u00e7ais.',
+        'contact.title':'9. Contact','contact.body':'Email : <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>',
+        'footer.privacy':'Politique de confidentialit\u00e9','footer.terms':'Conditions d\u2019utilisation','footer.home':'Accueil',
+      }
+    };
+    let lang='en';
+    function setLang(l){lang=l;document.documentElement.lang=l;const s=I18N[l];document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.getAttribute('data-i18n');if(s[k])e.innerHTML=s[k]});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l))}
+    document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
