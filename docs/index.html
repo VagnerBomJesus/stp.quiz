@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -578,6 +578,30 @@
       display: block;
     }
 
+    /* ─── Language switcher ─── */
+    .lang-switch {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--caption);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover { color: var(--title); border-color: var(--brand-primary); }
+    .lang-btn.active {
+      background: var(--brand-primary);
+      border-color: var(--brand-primary);
+      color: white;
+    }
+
     /* ─── Material Symbols ─── */
     .material-symbols-rounded {
       font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -599,9 +623,14 @@
         <span>STP<span class="dot"> • </span>Quiz<span class="underscore">_</span></span>
       </a>
       <div class="nav-links">
-        <a href="#features">Funcionalidades</a>
-        <a href="#author">Autor</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#author" data-i18n="nav.author">Author</a>
         <a href="#faq">FAQ</a>
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
         <a class="github" href="https://github.com/VagnerBomJesus/stp.quiz" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.9 18.6.5 12 .5z"/>
@@ -618,20 +647,20 @@
   <section class="hero" id="top">
     <div class="container hero-content">
       <img class="hero-logo" src="images/logo.png" alt="STP Quiz" />
-      <h1>
-        Descobre <span class="accent">São Tomé e Príncipe</span><br />
-        sem precisar de outra app.
+      <h1 data-i18n="hero.title">
+        Discover <span class="accent">São Tomé and Príncipe</span><br />
+        without needing another app.
       </h1>
-      <p class="sub">
-        Quiz educativo sobre história, geografia, cultura, gastronomia,
-        línguas e música do arquipélago. Grátis, sem anúncios,
-        funciona offline.
+      <p class="sub" data-i18n="hero.sub">
+        Educational quiz about history, geography, culture, gastronomy,
+        languages and music of the archipelago. Free, no ads,
+        works offline.
       </p>
       <div class="cta-row">
         <a href="https://play.google.com/store/apps/details?id=st.stpquiz.bjtech" target="_blank" rel="noopener">
           <img src="images/en_badge_web_generic_google_play.png" alt="Get it on Google Play" style="height:64px;" />
         </a>
-        <a class="btn btn-ghost" href="#features">Ver funcionalidades</a>
+        <a class="btn btn-ghost" href="#features" data-i18n="hero.cta_features">See features</a>
       </div>
     </div>
   </section>
@@ -643,18 +672,18 @@
     <div class="pillars-grid">
       <div class="pillar">
         <div class="icon"><span class="material-symbols-rounded">lock</span></div>
-        <h3>Privacidade primeiro</h3>
-        <p>Sem recolha de dados pessoais. O progresso fica no teu dispositivo, nada vai para servidores externos.</p>
+        <h3 data-i18n="pillar.privacy.title">Privacy first</h3>
+        <p data-i18n="pillar.privacy.desc">No personal data collected. Your progress stays on your device, nothing is sent to external servers.</p>
       </div>
       <div class="pillar">
         <div class="icon"><span class="material-symbols-rounded">money_off</span></div>
-        <h3>Totalmente gratuita</h3>
-        <p>Sem anúncios, sem compras dentro da app, sem subscrição. Apenas conhecimento.</p>
+        <h3 data-i18n="pillar.free.title">Completely free</h3>
+        <p data-i18n="pillar.free.desc">No ads, no in-app purchases, no subscriptions. Just knowledge.</p>
       </div>
       <div class="pillar">
         <div class="icon"><span class="material-symbols-rounded">wifi_off</span></div>
-        <h3>Funciona offline</h3>
-        <p>Depois do primeiro arranque, joga em qualquer lado — não precisas de ligação à internet.</p>
+        <h3 data-i18n="pillar.offline.title">Works offline</h3>
+        <p data-i18n="pillar.offline.desc">After the first launch, play anywhere — no internet connection needed.</p>
       </div>
     </div>
   </section>
@@ -664,9 +693,9 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="feature" id="screenshots">
     <div class="container">
-      <span class="section-eyebrow">A aplicacao</span>
-      <h2 class="section-title">Ve como funciona.</h2>
-      <p class="section-sub">Navega pelos ecras da STP Quiz e descobre a experiencia antes de instalar.</p>
+      <span class="section-eyebrow" data-i18n="screenshots.eyebrow">The app</span>
+      <h2 class="section-title" data-i18n="screenshots.title">See how it works.</h2>
+      <p class="section-sub" data-i18n="screenshots.sub">Browse through the STP Quiz screens and discover the experience before installing.</p>
       <div class="screenshots-scroll">
         <div class="screenshot-item"><img src="images/screenshot-0.png" alt="Ecra inicial da STP Quiz" loading="lazy" /></div>
         <div class="screenshot-item"><img src="images/screenshot-1.png" alt="Niveis de dificuldade" loading="lazy" /></div>
@@ -682,48 +711,48 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="feature" id="features">
     <div class="container">
-      <span class="section-eyebrow">Conteúdo</span>
-      <h2 class="section-title">Seis temas, quatro níveis, uma ilha cheia de história.</h2>
-      <p class="section-sub">Cada tema tem perguntas e uma página educativa dedicada. Desbloqueia tudo desde o primeiro toque.</p>
+      <span class="section-eyebrow" data-i18n="cats.eyebrow">Content</span>
+      <h2 class="section-title" data-i18n="cats.title">Six topics, four levels, an island full of history.</h2>
+      <p class="section-sub" data-i18n="cats.sub">Each topic has questions and a dedicated educational page. Everything unlocked from the first tap.</p>
 
       <div class="cats-grid">
         <div class="cat">
           <div class="icon" style="background:rgba(130,87,229,.18); color:#8257E5;"><span class="material-symbols-rounded">menu_book</span></div>
-          <h4>História de STP</h4>
-          <p>Da chegada portuguesa à independência em 1975.</p>
+          <h4 data-i18n="cat.history.title">History of STP</h4>
+          <p data-i18n="cat.history.desc">From the Portuguese arrival to independence in 1975.</p>
         </div>
         <div class="cat">
           <div class="icon" style="background:rgba(3,171,79,.18); color:#03AB4F;"><span class="material-symbols-rounded">map</span></div>
-          <h4>Geografia</h4>
-          <p>Duas ilhas vulcânicas sobre o Equador.</p>
+          <h4 data-i18n="cat.geo.title">Geography</h4>
+          <p data-i18n="cat.geo.desc">Two volcanic islands on the Equator.</p>
         </div>
         <div class="cat">
           <div class="icon" style="background:rgba(232,137,28,.18); color:#E8891C;"><span class="material-symbols-rounded">theater_comedy</span></div>
-          <h4>Cultura</h4>
-          <p>Identidade crioula entre África e a Europa.</p>
+          <h4 data-i18n="cat.culture.title">Culture</h4>
+          <p data-i18n="cat.culture.desc">Creole identity between Africa and Europe.</p>
         </div>
         <div class="cat">
           <div class="icon" style="background:rgba(204,55,80,.18); color:#CC3750;"><span class="material-symbols-rounded">restaurant</span></div>
-          <h4>Gastronomia</h4>
-          <p>Sabores tropicais entre o mar e a floresta.</p>
+          <h4 data-i18n="cat.food.title">Gastronomy</h4>
+          <p data-i18n="cat.food.desc">Tropical flavours between the sea and the forest.</p>
         </div>
         <div class="cat">
           <div class="icon" style="background:rgba(99,99,219,.18); color:#6363DB;"><span class="material-symbols-rounded">translate</span></div>
-          <h4>Línguas</h4>
-          <p>Português e crioulos locais convivem no dia a dia.</p>
+          <h4 data-i18n="cat.lang.title">Languages</h4>
+          <p data-i18n="cat.lang.desc">Portuguese and local creoles coexist daily.</p>
         </div>
         <div class="cat">
           <div class="icon" style="background:rgba(87,182,229,.18); color:#57B6E5;"><span class="material-symbols-rounded">music_note</span></div>
-          <h4>Música</h4>
-          <p>Ritmos tradicionais entre festa e memória.</p>
+          <h4 data-i18n="cat.music.title">Music</h4>
+          <p data-i18n="cat.music.desc">Traditional rhythms between celebration and memory.</p>
         </div>
       </div>
 
       <div class="levels-row">
-        <span class="chip easy">Fácil</span>
-        <span class="chip medium">Médio</span>
-        <span class="chip hard">Difícil</span>
-        <span class="chip expert">Perito</span>
+        <span class="chip easy" data-i18n="level.easy">Easy</span>
+        <span class="chip medium" data-i18n="level.medium">Medium</span>
+        <span class="chip hard" data-i18n="level.hard">Hard</span>
+        <span class="chip expert" data-i18n="level.expert">Expert</span>
       </div>
     </div>
   </section>
@@ -734,12 +763,12 @@
   <section class="feature">
     <div class="container two-col">
       <div>
-        <span class="section-eyebrow">Personalização</span>
-        <h2 class="section-title">A tua app, com as tuas cores.</h2>
-        <p class="section-sub">
-          Tema claro, escuro ou seguir o sistema. Português, inglês ou
-          francês. E se quiseres ir mais longe, define a tua própria cor
-          primária e secundária.
+        <span class="section-eyebrow" data-i18n="custom.eyebrow">Customisation</span>
+        <h2 class="section-title" data-i18n="custom.title">Your app, your colours.</h2>
+        <p class="section-sub" data-i18n="custom.sub">
+          Light, dark or system theme. Portuguese, English or
+          French. And if you want to go further, set your own
+          primary and secondary colour.
         </p>
         <div class="color-row">
           <div class="swatch" style="background:#8257E5;" title="Roxo (default)"></div>
@@ -753,47 +782,8 @@
         </div>
       </div>
 
-      <!-- Phone mock with home progress card -->
-      <div class="phone-mock">
-        <div class="phone-screen">
-          <div class="mock-card" style="background:linear-gradient(135deg,#57B6E5,#8257E5); border:none;">
-            <div class="title" style="color:white; font-size:14px;">Vamos começar</div>
-            <div class="meta" style="color:rgba(255,255,255,.85); margin-top:4px;">Complete os desafios e avance em conhecimento</div>
-          </div>
-          <div class="mock-card">
-            <div class="top">
-              <div class="pill"><span class="material-symbols-rounded" style="font-size:16px;">menu_book</span></div>
-              <div>
-                <div class="title">História de STP</div>
-                <div class="meta" style="margin:0;">Fácil</div>
-              </div>
-            </div>
-            <div class="meta">2 de 5</div>
-            <div class="bar"><i style="width:40%;"></i></div>
-          </div>
-          <div class="mock-card">
-            <div class="top">
-              <div class="pill" style="background:rgba(232,137,28,.22); color:#E8891C;"><span class="material-symbols-rounded" style="font-size:16px;">restaurant</span></div>
-              <div>
-                <div class="title">Gastronomia</div>
-                <div class="meta" style="margin:0;">Médio</div>
-              </div>
-            </div>
-            <div class="meta">1 de 4</div>
-            <div class="bar"><i style="width:25%;"></i></div>
-          </div>
-          <div class="mock-card">
-            <div class="top">
-              <div class="pill" style="background:rgba(87,182,229,.22); color:#57B6E5;"><span class="material-symbols-rounded" style="font-size:16px;">music_note</span></div>
-              <div>
-                <div class="title">Música</div>
-                <div class="meta" style="margin:0;">Perito</div>
-              </div>
-            </div>
-            <div class="meta">0 de 3</div>
-            <div class="bar"><i style="width:0%;"></i></div>
-          </div>
-        </div>
+      <div>
+        <img src="images/personalization.png" alt="STP Quiz personalization screen" style="max-width:320px; width:100%; margin:0 auto; display:block; border-radius:18px;" />
       </div>
     </div>
   </section>
@@ -803,33 +793,33 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="feature">
     <div class="container">
-      <span class="section-eyebrow">Factos &amp; Números</span>
-      <h2 class="section-title">Quinze dados-chave sobre o país.</h2>
-      <p class="section-sub">Para começar com contexto: localização, área, população, capital, ponto mais alto e mais.</p>
+      <span class="section-eyebrow" data-i18n="facts.eyebrow">Facts &amp; Numbers</span>
+      <h2 class="section-title" data-i18n="facts.title">Fifteen key facts about the country.</h2>
+      <p class="section-sub" data-i18n="facts.sub">Start with context: location, area, population, capital, highest point and more.</p>
 
       <div class="cats-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">DESIGNAÇÃO OFICIAL</div>
-          <h4 style="margin-top:6px;">Rep. Democrática de STP</h4>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.name.label">OFFICIAL NAME</div>
+          <h4 style="margin-top:6px;" data-i18n="fact.name.value">Democratic Rep. of STP</h4>
         </div>
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">INDEPENDÊNCIA</div>
-          <h4 style="margin-top:6px;">12 de julho de 1975</h4>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.independence.label">INDEPENDENCE</div>
+          <h4 style="margin-top:6px;" data-i18n="fact.independence.value">12 July 1975</h4>
         </div>
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">PONTO MAIS ALTO</div>
-          <h4 style="margin-top:6px;">Pico de São Tomé · 2.024 m</h4>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.peak.label">HIGHEST POINT</div>
+          <h4 style="margin-top:6px;">Pico de São Tomé · 2,024 m</h4>
         </div>
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">FUSO HORÁRIO</div>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.timezone.label">TIME ZONE</div>
           <h4 style="margin-top:6px;">UTC (GMT)</h4>
         </div>
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">LÍNGUA OFICIAL</div>
-          <h4 style="margin-top:6px;">Português</h4>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.language.label">OFFICIAL LANGUAGE</div>
+          <h4 style="margin-top:6px;" data-i18n="fact.language.value">Portuguese</h4>
         </div>
         <div class="cat">
-          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;">CÓDIGO DO PAÍS</div>
+          <div class="meta" style="font-size:11px; letter-spacing:.06em; color:#8257E5; font-weight:700;" data-i18n="fact.code.label">COUNTRY CODE</div>
           <h4 style="margin-top:6px;">+239</h4>
         </div>
       </div>
@@ -841,18 +831,18 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="feature" id="author">
     <div class="container">
-      <span class="section-eyebrow">Sobre o autor</span>
-      <h2 class="section-title">Construída com cuidado, por um só.</h2>
+      <span class="section-eyebrow" data-i18n="author.eyebrow">About the author</span>
+      <h2 class="section-title" data-i18n="author.title">Built with care, by one.</h2>
       <div class="author-card">
         <img class="author-avatar" src="images/vagnerbomjesus.png" alt="Vagner Bom Jesus" onerror="this.style.display='none'" />
         <div>
           <h3>Vagner Bom Jesus</h3>
-          <div class="role">Programador · Autor da aplicação</div>
-          <p>
-            A STP Quiz é um projeto pessoal para divulgar São Tomé e
-            Príncipe e, ao mesmo tempo, aplicar e aprofundar conhecimentos
-            em desenvolvimento móvel com Flutter. Construída como produto
-            independente, com cuidado nos detalhes de design e privacidade.
+          <div class="role" data-i18n="author.role">Developer · App author</div>
+          <p data-i18n="author.bio">
+            STP Quiz is a personal project to promote São Tomé and
+            Príncipe while deepening mobile development skills
+            with Flutter. Built as an independent product, with care
+            for design details and privacy.
           </p>
         </div>
       </div>
@@ -864,38 +854,38 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="feature" id="faq">
     <div class="container">
-      <span class="section-eyebrow">Perguntas frequentes</span>
-      <h2 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto;">As perguntas que toda a gente faz</h2>
+      <span class="section-eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+      <h2 class="section-title" style="text-align:center; margin-left:auto; margin-right:auto;" data-i18n="faq.title">The questions everyone asks</h2>
       <div class="faq" style="margin-top:48px;">
 
         <div class="faq-item">
-          <button class="faq-q">A aplicação é mesmo gratuita? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Sim. Sem subscrições, sem compras dentro da app e sem anúncios. Tudo o que vês está disponível desde o primeiro arranque.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q1">Is the app really free?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a1">Yes. No subscriptions, no in-app purchases and no ads. Everything you see is available from the first launch.</p></div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Preciso de internet para jogar? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Não. O conteúdo é local e funciona offline depois da primeira abertura. Só precisas de internet para o download inicial da Play Store.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q2">Do I need internet to play?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a2">No. Content is local and works offline after the first launch. You only need internet for the initial Play Store download.</p></div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Onde fica guardado o meu progresso? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Apenas no teu dispositivo, através do mecanismo de preferências locais do Android (SharedPreferences). Nada é enviado para servidores externos.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q3">Where is my progress stored?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a3">Only on your device, through Android's local preferences (SharedPreferences). Nothing is sent to external servers.</p></div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Em que línguas está disponível? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Português, inglês e francês — ou a língua do sistema, por defeito. A escolha é trocada dentro da app, em Definições.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q4">What languages are available?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a4">Portuguese, English and French — or the system language by default. The choice can be changed inside the app, in Settings.</p></div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Posso sugerir uma nova pergunta ou correção? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Sim! Envia para <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — sempre que possível com a fonte para a informação poder ser validada.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q5">Can I suggest a new question or correction?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a5">Yes! Send to <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — whenever possible with the source so the information can be validated.</p></div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">Como apago todo o meu progresso? <span class="plus">+</span></button>
-          <div class="faq-a"><p>Dentro da app vai a Definições &gt; Limpar Cache. A acção remove todos os resultados guardados.</p></div>
+          <button class="faq-q"><span data-i18n="faq.q6">How do I delete all my progress?</span> <span class="plus">+</span></button>
+          <div class="faq-a"><p data-i18n="faq.a6">Inside the app go to Settings &gt; Clear Cache. This removes all saved results.</p></div>
         </div>
 
       </div>
@@ -907,8 +897,8 @@
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <section class="cta-final">
     <div class="container">
-      <h2>Descobre <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé e Príncipe</span> hoje.</h2>
-      <p>Grátis, sem anúncios e sem dados pessoais. Apenas conhecimento sobre um dos países mais bonitos do Golfo da Guiné.</p>
+      <h2 data-i18n="cta.title">Discover <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé and Príncipe</span> today.</h2>
+      <p data-i18n="cta.sub">Free, no ads and no personal data. Just knowledge about one of the most beautiful countries in the Gulf of Guinea.</p>
       <a href="https://play.google.com/store/apps/details?id=st.stpquiz.bjtech" target="_blank" rel="noopener">
         <img src="images/en_badge_web_generic_google_play.png" alt="Get it on Google Play" style="height:64px; margin:0 auto;" />
       </a>
@@ -921,20 +911,154 @@
   <footer>
     <div class="container footer-inner">
       <div>
-        Feito com <span class="heart">♥</span> por
+        <span data-i18n="footer.made">Made with</span> <span class="heart">♥</span> <span data-i18n="footer.by">by</span>
         <a href="mailto:vagneripg@gmail.com" style="color:var(--title); font-weight:600;">Vagner Bom Jesus</a>
         · © <span id="year">2026</span>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md" target="_blank" rel="noopener">Privacidade</a>
+        <a href="https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md" target="_blank" rel="noopener" data-i18n="footer.privacy">Privacy</a>
         <a href="https://github.com/VagnerBomJesus/stp.quiz" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:vagneripg@gmail.com">Contacto</a>
+        <a href="mailto:vagneripg@gmail.com" data-i18n="footer.contact">Contact</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Ano dinâmico no rodapé
+    // ─── i18n ────────────────────────────────────────────────────────────
+    const I18N = {
+      en: {
+        'nav.features':'Features','nav.author':'Author',
+        'hero.title':'Discover <span class="accent">São Tomé and Príncipe</span><br/>without needing another app.',
+        'hero.sub':'Educational quiz about history, geography, culture, gastronomy, languages and music of the archipelago. Free, no ads, works offline.',
+        'hero.cta_features':'See features',
+        'pillar.privacy.title':'Privacy first','pillar.privacy.desc':'No personal data collected. Your progress stays on your device, nothing is sent to external servers.',
+        'pillar.free.title':'Completely free','pillar.free.desc':'No ads, no in-app purchases, no subscriptions. Just knowledge.',
+        'pillar.offline.title':'Works offline','pillar.offline.desc':'After the first launch, play anywhere — no internet connection needed.',
+        'screenshots.eyebrow':'The app','screenshots.title':'See how it works.','screenshots.sub':'Browse through the STP Quiz screens and discover the experience before installing.',
+        'cats.eyebrow':'Content','cats.title':'Six topics, four levels, an island full of history.','cats.sub':'Each topic has questions and a dedicated educational page. Everything unlocked from the first tap.',
+        'cat.history.title':'History of STP','cat.history.desc':'From the Portuguese arrival to independence in 1975.',
+        'cat.geo.title':'Geography','cat.geo.desc':'Two volcanic islands on the Equator.',
+        'cat.culture.title':'Culture','cat.culture.desc':'Creole identity between Africa and Europe.',
+        'cat.food.title':'Gastronomy','cat.food.desc':'Tropical flavours between the sea and the forest.',
+        'cat.lang.title':'Languages','cat.lang.desc':'Portuguese and local creoles coexist daily.',
+        'cat.music.title':'Music','cat.music.desc':'Traditional rhythms between celebration and memory.',
+        'level.easy':'Easy','level.medium':'Medium','level.hard':'Hard','level.expert':'Expert',
+        'custom.eyebrow':'Customisation','custom.title':'Your app, your colours.','custom.sub':'Light, dark or system theme. Portuguese, English or French. And if you want to go further, set your own primary and secondary colour.',
+        'facts.eyebrow':'Facts & Numbers','facts.title':'Fifteen key facts about the country.','facts.sub':'Start with context: location, area, population, capital, highest point and more.',
+        'fact.name.label':'OFFICIAL NAME','fact.name.value':'Democratic Rep. of STP',
+        'fact.independence.label':'INDEPENDENCE','fact.independence.value':'12 July 1975',
+        'fact.peak.label':'HIGHEST POINT','fact.timezone.label':'TIME ZONE',
+        'fact.language.label':'OFFICIAL LANGUAGE','fact.language.value':'Portuguese',
+        'fact.code.label':'COUNTRY CODE',
+        'author.eyebrow':'About the author','author.title':'Built with care, by one.',
+        'author.role':'Developer · App author','author.bio':'STP Quiz is a personal project to promote São Tomé and Príncipe while deepening mobile development skills with Flutter. Built as an independent product, with care for design details and privacy.',
+        'faq.eyebrow':'FAQ','faq.title':'The questions everyone asks',
+        'faq.q1':'Is the app really free?','faq.a1':'Yes. No subscriptions, no in-app purchases and no ads. Everything you see is available from the first launch.',
+        'faq.q2':'Do I need internet to play?','faq.a2':'No. Content is local and works offline after the first launch. You only need internet for the initial Play Store download.',
+        'faq.q3':'Where is my progress stored?','faq.a3':'Only on your device, through Android\'s local preferences (SharedPreferences). Nothing is sent to external servers.',
+        'faq.q4':'What languages are available?','faq.a4':'Portuguese, English and French — or the system language by default. The choice can be changed inside the app, in Settings.',
+        'faq.q5':'Can I suggest a new question or correction?','faq.a5':'Yes! Send to <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — whenever possible with the source so the information can be validated.',
+        'faq.q6':'How do I delete all my progress?','faq.a6':'Inside the app go to Settings > Clear Cache. This removes all saved results.',
+        'cta.title':'Discover <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé and Príncipe</span> today.',
+        'cta.sub':'Free, no ads and no personal data. Just knowledge about one of the most beautiful countries in the Gulf of Guinea.',
+        'footer.made':'Made with','footer.by':'by','footer.privacy':'Privacy','footer.contact':'Contact',
+      },
+      pt: {
+        'nav.features':'Funcionalidades','nav.author':'Autor',
+        'hero.title':'Descobre <span class="accent">São Tomé e Príncipe</span><br/>sem precisar de outra app.',
+        'hero.sub':'Quiz educativo sobre história, geografia, cultura, gastronomia, línguas e música do arquipélago. Grátis, sem anúncios, funciona offline.',
+        'hero.cta_features':'Ver funcionalidades',
+        'pillar.privacy.title':'Privacidade primeiro','pillar.privacy.desc':'Sem recolha de dados pessoais. O progresso fica no teu dispositivo, nada vai para servidores externos.',
+        'pillar.free.title':'Totalmente gratuita','pillar.free.desc':'Sem anúncios, sem compras dentro da app, sem subscrição. Apenas conhecimento.',
+        'pillar.offline.title':'Funciona offline','pillar.offline.desc':'Depois do primeiro arranque, joga em qualquer lado — não precisas de ligação à internet.',
+        'screenshots.eyebrow':'A aplicação','screenshots.title':'Vê como funciona.','screenshots.sub':'Navega pelos ecrãs da STP Quiz e descobre a experiência antes de instalar.',
+        'cats.eyebrow':'Conteúdo','cats.title':'Seis temas, quatro níveis, uma ilha cheia de história.','cats.sub':'Cada tema tem perguntas e uma página educativa dedicada. Desbloqueia tudo desde o primeiro toque.',
+        'cat.history.title':'História de STP','cat.history.desc':'Da chegada portuguesa à independência em 1975.',
+        'cat.geo.title':'Geografia','cat.geo.desc':'Duas ilhas vulcânicas sobre o Equador.',
+        'cat.culture.title':'Cultura','cat.culture.desc':'Identidade crioula entre África e a Europa.',
+        'cat.food.title':'Gastronomia','cat.food.desc':'Sabores tropicais entre o mar e a floresta.',
+        'cat.lang.title':'Línguas','cat.lang.desc':'Português e crioulos locais convivem no dia a dia.',
+        'cat.music.title':'Música','cat.music.desc':'Ritmos tradicionais entre festa e memória.',
+        'level.easy':'Fácil','level.medium':'Médio','level.hard':'Difícil','level.expert':'Perito',
+        'custom.eyebrow':'Personalização','custom.title':'A tua app, com as tuas cores.','custom.sub':'Tema claro, escuro ou seguir o sistema. Português, inglês ou francês. E se quiseres ir mais longe, define a tua própria cor primária e secundária.',
+        'facts.eyebrow':'Factos e Números','facts.title':'Quinze dados-chave sobre o país.','facts.sub':'Para começar com contexto: localização, área, população, capital, ponto mais alto e mais.',
+        'fact.name.label':'DESIGNAÇÃO OFICIAL','fact.name.value':'Rep. Democrática de STP',
+        'fact.independence.label':'INDEPENDÊNCIA','fact.independence.value':'12 de julho de 1975',
+        'fact.peak.label':'PONTO MAIS ALTO','fact.timezone.label':'FUSO HORÁRIO',
+        'fact.language.label':'LÍNGUA OFICIAL','fact.language.value':'Português',
+        'fact.code.label':'CÓDIGO DO PAÍS',
+        'author.eyebrow':'Sobre o autor','author.title':'Construída com cuidado, por um só.',
+        'author.role':'Programador · Autor da aplicação','author.bio':'A STP Quiz é um projeto pessoal para divulgar São Tomé e Príncipe e, ao mesmo tempo, aplicar e aprofundar conhecimentos em desenvolvimento móvel com Flutter. Construída como produto independente, com cuidado nos detalhes de design e privacidade.',
+        'faq.eyebrow':'Perguntas frequentes','faq.title':'As perguntas que toda a gente faz',
+        'faq.q1':'A aplicação é mesmo gratuita?','faq.a1':'Sim. Sem subscrições, sem compras dentro da app e sem anúncios. Tudo o que vês está disponível desde o primeiro arranque.',
+        'faq.q2':'Preciso de internet para jogar?','faq.a2':'Não. O conteúdo é local e funciona offline depois da primeira abertura. Só precisas de internet para o download inicial da Play Store.',
+        'faq.q3':'Onde fica guardado o meu progresso?','faq.a3':'Apenas no teu dispositivo, através do mecanismo de preferências locais do Android (SharedPreferences). Nada é enviado para servidores externos.',
+        'faq.q4':'Em que línguas está disponível?','faq.a4':'Português, inglês e francês — ou a língua do sistema, por defeito. A escolha é trocada dentro da app, em Definições.',
+        'faq.q5':'Posso sugerir uma nova pergunta ou correção?','faq.a5':'Sim! Envia para <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — sempre que possível com a fonte para a informação poder ser validada.',
+        'faq.q6':'Como apago todo o meu progresso?','faq.a6':'Dentro da app vai a Definições > Limpar Cache. A acção remove todos os resultados guardados.',
+        'cta.title':'Descobre <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé e Príncipe</span> hoje.',
+        'cta.sub':'Grátis, sem anúncios e sem dados pessoais. Apenas conhecimento sobre um dos países mais bonitos do Golfo da Guiné.',
+        'footer.made':'Feito com','footer.by':'por','footer.privacy':'Privacidade','footer.contact':'Contacto',
+      },
+      fr: {
+        'nav.features':'Fonctionnalités','nav.author':'Auteur',
+        'hero.title':'Découvre <span class="accent">São Tomé-et-Príncipe</span><br/>sans avoir besoin d\'une autre app.',
+        'hero.sub':'Quiz éducatif sur l\'histoire, la géographie, la culture, la gastronomie, les langues et la musique de l\'archipel. Gratuit, sans publicités, fonctionne hors ligne.',
+        'hero.cta_features':'Voir les fonctionnalités',
+        'pillar.privacy.title':'Confidentialité d\'abord','pillar.privacy.desc':'Aucune collecte de données personnelles. Votre progression reste sur votre appareil, rien n\'est envoyé à des serveurs externes.',
+        'pillar.free.title':'Totalement gratuite','pillar.free.desc':'Sans publicités, sans achats intégrés, sans abonnement. Juste du savoir.',
+        'pillar.offline.title':'Fonctionne hors ligne','pillar.offline.desc':'Après le premier lancement, jouez n\'importe où — pas besoin de connexion internet.',
+        'screenshots.eyebrow':'L\'application','screenshots.title':'Voyez comment ça marche.','screenshots.sub':'Parcourez les écrans de STP Quiz et découvrez l\'expérience avant d\'installer.',
+        'cats.eyebrow':'Contenu','cats.title':'Six thèmes, quatre niveaux, une île pleine d\'histoire.','cats.sub':'Chaque thème a des questions et une page éducative dédiée. Tout débloqué dès la première utilisation.',
+        'cat.history.title':'Histoire de STP','cat.history.desc':'De l\'arrivée portugaise à l\'indépendance en 1975.',
+        'cat.geo.title':'Géographie','cat.geo.desc':'Deux îles volcaniques sur l\'Équateur.',
+        'cat.culture.title':'Culture','cat.culture.desc':'Identité créole entre l\'Afrique et l\'Europe.',
+        'cat.food.title':'Gastronomie','cat.food.desc':'Saveurs tropicales entre la mer et la forêt.',
+        'cat.lang.title':'Langues','cat.lang.desc':'Le portugais et les créoles locaux cohabitent au quotidien.',
+        'cat.music.title':'Musique','cat.music.desc':'Rythmes traditionnels entre fête et mémoire.',
+        'level.easy':'Facile','level.medium':'Moyen','level.hard':'Difficile','level.expert':'Expert',
+        'custom.eyebrow':'Personnalisation','custom.title':'Votre app, vos couleurs.','custom.sub':'Thème clair, sombre ou système. Portugais, anglais ou français. Et si vous voulez aller plus loin, définissez vos propres couleurs primaire et secondaire.',
+        'facts.eyebrow':'Faits et Chiffres','facts.title':'Quinze données clés sur le pays.','facts.sub':'Commencez avec le contexte : localisation, superficie, population, capitale, point culminant et plus.',
+        'fact.name.label':'NOM OFFICIEL','fact.name.value':'Rép. Démocratique de STP',
+        'fact.independence.label':'INDÉPENDANCE','fact.independence.value':'12 juillet 1975',
+        'fact.peak.label':'POINT CULMINANT','fact.timezone.label':'FUSEAU HORAIRE',
+        'fact.language.label':'LANGUE OFFICIELLE','fact.language.value':'Portugais',
+        'fact.code.label':'CODE DU PAYS',
+        'author.eyebrow':'À propos de l\'auteur','author.title':'Construite avec soin, par un seul.',
+        'author.role':'Développeur · Auteur de l\'app','author.bio':'STP Quiz est un projet personnel pour promouvoir São Tomé-et-Príncipe tout en approfondissant les compétences en développement mobile avec Flutter. Construite comme un produit indépendant, avec soin pour les détails de design et la confidentialité.',
+        'faq.eyebrow':'Questions fréquentes','faq.title':'Les questions que tout le monde pose',
+        'faq.q1':'L\'application est-elle vraiment gratuite ?','faq.a1':'Oui. Pas d\'abonnements, pas d\'achats intégrés et pas de publicités. Tout ce que vous voyez est disponible dès le premier lancement.',
+        'faq.q2':'Ai-je besoin d\'internet pour jouer ?','faq.a2':'Non. Le contenu est local et fonctionne hors ligne après la première ouverture. Vous n\'avez besoin d\'internet que pour le téléchargement initial sur le Play Store.',
+        'faq.q3':'Où est stockée ma progression ?','faq.a3':'Uniquement sur votre appareil, via les préférences locales d\'Android (SharedPreferences). Rien n\'est envoyé à des serveurs externes.',
+        'faq.q4':'En quelles langues est-elle disponible ?','faq.a4':'Portugais, anglais et français — ou la langue du système par défaut. Le choix se fait dans l\'app, dans Paramètres.',
+        'faq.q5':'Puis-je suggérer une question ou une correction ?','faq.a5':'Oui ! Envoyez à <a style="color:var(--brand-secondary)" href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a> — si possible avec la source pour que l\'information puisse être validée.',
+        'faq.q6':'Comment supprimer toute ma progression ?','faq.a6':'Dans l\'app, allez dans Paramètres > Vider le cache. Cela supprime tous les résultats enregistrés.',
+        'cta.title':'Découvre <span style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip:text; background-clip:text; color:transparent;">São Tomé-et-Príncipe</span> aujourd\'hui.',
+        'cta.sub':'Gratuit, sans publicités et sans données personnelles. Juste du savoir sur l\'un des plus beaux pays du Golfe de Guinée.',
+        'footer.made':'Fait avec','footer.by':'par','footer.privacy':'Confidentialité','footer.contact':'Contact',
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      const strings = I18N[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (strings[key]) el.innerHTML = strings[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+    });
+
+    // Ano dinamico no rodape
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // FAQ accordion
@@ -942,9 +1066,7 @@
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
         const wasOpen = item.classList.contains('open');
-        // Fecha todos
         document.querySelectorAll('.faq-item.open').forEach((i) => i.classList.remove('open'));
-        // Abre o tocado, se não estava aberto
         if (!wasOpen) item.classList.add('open');
       });
     });
