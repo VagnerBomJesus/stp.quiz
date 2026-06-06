@@ -9,7 +9,7 @@
 > página pode ser usado no campo "Política de Privacidade" da Google
 > Play Console.
 >
-> URL público: `https://github.com/VagnerBomJesus/stpquiz/blob/main/PRIVACY.md`
+> URL público: `https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md`
 
 ---
 
@@ -126,4 +126,4 @@ pela data de "última actualização" no topo.
 Para qualquer questão relacionada com privacidade ou protecção de dados:
 
 **Email:** vagneripg@gmail.com
-**Repositório:** https://github.com/VagnerBomJesus/stpquiz
+**Repositório:** https://github.com/VagnerBomJesus/stp.quiz
