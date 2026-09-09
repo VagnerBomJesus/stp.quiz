@@ -1,0 +1,19 @@
+{
+  "name": "STP Quiz",
+  "short_name": "STP Quiz",
+  "description": "Quiz educativo sobre São Tomé e Príncipe. 160 perguntas, 8 temas, 4 níveis, PT/EN/FR.",
+  "lang": "pt",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#8257E5",
+  "icons": [
+    { "src": "images/logo.png?v=2", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/apple-touch-icon.png?v=2", "sizes": "180x180", "type": "image/png" }
+  ],
+  "related_applications": [
+    { "platform": "play", "url": "https://play.google.com/store/apps/details?id=st.stpquiz.bjtech", "id": "st.stpquiz.bjtech" }
+  ],
+  "prefer_related_applications": true
+}

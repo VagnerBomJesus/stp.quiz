@@ -1,0 +1,7 @@
+# STP Quiz · security.txt (RFC 9116)
+Contact: mailto:vagneripg@gmail.com
+Expires: 2027-09-30T00:00:00.000Z
+Preferred-Languages: pt, en, fr
+Canonical: https://vagnerbomjesus.github.io/stp.quiz/.well-known/security.txt
+Policy: https://vagnerbomjesus.github.io/stp.quiz/privacy.html
+Acknowledgments: https://vagnerbomjesus.github.io/stp.quiz/humans.txt

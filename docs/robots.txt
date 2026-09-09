@@ -1,0 +1,6 @@
+# STP Quiz · https://vagnerbomjesus.github.io/stp.quiz/
+User-agent: *
+Allow: /
+Disallow: /fonts/
+
+Sitemap: https://vagnerbomjesus.github.io/stp.quiz/sitemap.xml

@@ -1,4 +1,4 @@
-# Listing Play Store — Português (pt-PT)
+# Listing Play Store, Português (pt-PT)
 
 ## Nome da aplicação
 > Limite: 30 caracteres
@@ -11,7 +11,7 @@ STP Quiz
 > Limite: 80 caracteres
 
 ```
-Quiz educativo sobre São Tomé e Príncipe — história, cultura, língua e mais.
+Quiz educativo sobre São Tomé e Príncipe, história, cultura, língua e mais.
 ```
 (78 caracteres)
 
@@ -22,17 +22,22 @@ Quiz educativo sobre São Tomé e Príncipe — história, cultura, língua e ma
 STP Quiz é uma aplicação educativa que te desafia com perguntas sobre São Tomé e Príncipe. Descobre a história, geografia, cultura, gastronomia, línguas e música do arquipélago através de quizzes organizados por nível e por tema.
 
 🌍 SOBRE O QUE PODES APRENDER
-• História — da chegada portuguesa à independência em 1975
-• Geografia — duas ilhas vulcânicas sobre o Equador
-• Cultura — Tchiloli, Auto de Floripes, festas e literatura
-• Gastronomia — Calulu, arroz de polvo, omelete santomense e doçaria
-• Línguas — Português, Forro, Angolar, Lung'Ie e Cabo-verdiano
-• Música — Socopé, Déxa, Puita, Ússua e novas gerações
+• História: da chegada portuguesa à independência em 1975
+• Geografia: duas ilhas vulcânicas sobre o Equador
+• Cultura: Tchiloli, Auto de Floripes, festas e literatura
+• Gastronomia: Calulu, arroz de polvo, omelete santomense e doçaria
+• Línguas: Português, Forro, Angolar, Lung'Ie e Cabo-verdiano
+• Música: Socopé, Déxa, Puita, Ússua e novas gerações
+• Desporto: futebol, atletismo e a presença olímpica do país
+• Moeda: da dobra à nova dobra (STN) e à paridade com o euro
 
 🎯 FUNCIONALIDADES
-• Quatro níveis de dificuldade: Fácil, Médio, Difícil e Perito
+• 160 perguntas em 8 temas, com explicação e fonte em cada uma
+• Quatro níveis com mecânicas próprias: dica 50/50, cronómetro, vidas e multiplicador ×1 a ×4
+• Curiosidade do Dia com notificação diária opcional às 9h
+• Estatísticas por tema e nível, revisão de respostas e quiz aleatório
 • O teu progresso fica guardado no dispositivo
-• Página "Factos e Números" com 15 dados-chave sobre o país
+• Página "Factos e Números" com 19 dados-chave sobre o país
 • Conteúdo educativo detalhado em cada tema do quiz
 • 10 perguntas frequentes na secção de FAQ
 
@@ -54,7 +59,7 @@ STP Quiz é um projeto pessoal desenvolvido por Vagner Bom Jesus para divulgar S
 ✨ A APLICAÇÃO É TOTALMENTE GRATUITA
 Sem subscrições, sem compras dentro da app, sem anúncios. Apenas conhecimento sobre um dos países mais bonitos do golfo da Guiné.
 
-Sugestões, correções factuais ou ideias de novas perguntas são bem-vindas — escreve para vagneripg@gmail.com.
+Sugestões, correções factuais ou ideias de novas perguntas são bem-vindas, escreve para vagneripg@gmail.com.
 ```
 
 ## Categoria
@@ -68,10 +73,10 @@ vagneripg@gmail.com
 
 ## Política de privacidade (URL público)
 ```
-https://github.com/VagnerBomJesus/stpquiz/blob/main/PRIVACY.md
+https://vagnerbomjesus.github.io/stp.quiz/privacy.html
 ```
 
 ## Website (opcional)
 ```
-https://github.com/VagnerBomJesus/stpquiz
+https://vagnerbomjesus.github.io/stp.quiz/
 ```

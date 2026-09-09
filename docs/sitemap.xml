@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://vagnerbomjesus.github.io/stp.quiz/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://vagnerbomjesus.github.io/stp.quiz/?lang=pt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vagnerbomjesus.github.io/stp.quiz/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vagnerbomjesus.github.io/stp.quiz/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vagnerbomjesus.github.io/stp.quiz/" />
+  </url>
+  <url>
+    <loc>https://vagnerbomjesus.github.io/stp.quiz/privacy.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vagnerbomjesus.github.io/stp.quiz/terms.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vagnerbomjesus.github.io/stp.quiz/support.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vagnerbomjesus.github.io/stp.quiz/llms.txt</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

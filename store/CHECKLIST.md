@@ -1,4 +1,10 @@
-# Checklist — Publicação STP Quiz na Google Play (teste interno)
+# Checklist, Publicação STP Quiz na Google Play (teste interno)
+
+> **Histórico (junho 2026).** Esta checklist serviu para a primeira publicação.
+> A app está em Produção na Google Play (`st.stpquiz.bjtech`). A checklist em
+> vigor para novas versões está no repositório da app:
+> `quizstp/docs/product/RELEASE_CHECKLIST_1.1.0_BUILD15.md`.
+> URLs corrigidos: política de privacidade → `https://vagnerbomjesus.github.io/stp.quiz/privacy.html`.
 
 Lista do que precisa de existir antes de abrirmos o Play Console.
 
@@ -47,8 +53,8 @@ Lista do que precisa de existir antes de abrirmos o Play Console.
 | Ícone da app           | 512 × 512      | PNG, 32-bit  | ⚠️ a partir de `assets/images/logo.png` |
 | Feature graphic        | 1024 × 500     | PNG/JPG      | ❌ falta criar |
 | Screenshots telefone   | mín. 2, máx. 8 · 1080 × 1920 (ou similar 9:16) | PNG/JPG | ❌ falta capturar |
-| Screenshots tablet 7"  | opcional       | PNG/JPG      | — |
-| Screenshots tablet 10" | opcional       | PNG/JPG      | — |
+| Screenshots tablet 7"  | opcional       | PNG/JPG      |, |
+| Screenshots tablet 10" | opcional       | PNG/JPG      |, |
 
 **Como capturar screenshots para a loja**:
 
@@ -75,15 +81,15 @@ Ecrãs sugeridos a capturar (8 no total):
 
 - [x] **PRIVACY.md** criado na raiz do repositório
 - [ ] **Repositório no GitHub público** (se for privado, o URL devolve 404)
-- [ ] URL final: `https://github.com/VagnerBomJesus/stpquiz/blob/main/PRIVACY.md`
+- [x] URL final: `https://vagnerbomjesus.github.io/stp.quiz/privacy.html`
 
 ---
 
 ## 4. Descrições da loja
 
-- [x] `store/listing_pt.md` — Português (idioma padrão)
-- [x] `store/listing_en.md` — Inglês
-- [x] `store/listing_fr.md` — Francês
+- [x] `store/listing_pt.md`: Português (idioma padrão)
+- [x] `store/listing_en.md`: Inglês
+- [x] `store/listing_fr.md`: Francês
 
 ---
 
@@ -98,7 +104,7 @@ Ecrãs sugeridos a capturar (8 no total):
 | Classificação de conteúdo             | Preencher questionário (educacional, sem violência/sexo/álcool/drogas/apostas) → IARC categoria provável **3+** ou **Todos** |
 | Público-alvo e conteúdo               | Idade 13+ (escolha conservadora)               |
 | Aplicação de notícias                 | Não                                            |
-| Política de privacidade               | URL público do PRIVACY.md no GitHub            |
+| Política de privacidade               | `https://vagnerbomjesus.github.io/stp.quiz/privacy.html` |
 | Segurança dos dados                   | Não recolhe dados pessoais; tudo em local      |
 | Compromissos governamentais           | Não aplicável                                  |
 | País/região                           | Disponibilizar em todos os países              |
@@ -107,12 +113,12 @@ Ecrãs sugeridos a capturar (8 no total):
 
 ## 6. Teste interno (canal "Internal testing")
 
-- [ ] **Lista de testers** — emails Google (até 100)
+- [ ] **Lista de testers**: emails Google (até 100)
   - vagneripg@gmail.com (próprio)
   - amigos / família que ajudem a validar
 - [ ] **Notas da versão**:
   ```
-  v1.0.0 — primeira versão para testes internos.
+  v1.0.0, primeira versão para testes internos.
   - Quiz educativo sobre São Tomé e Príncipe
   - 6 categorias com 4 níveis de dificuldade
   - Idiomas: PT, EN, FR (segue sistema)
@@ -134,10 +140,10 @@ Ecrãs sugeridos a capturar (8 no total):
 
 ## Faltas críticas neste momento
 
-🟥 **AAB ainda não construído** — precisas correr os comandos do ponto 1
-🟥 **Feature graphic 1024×500** — falta criar
-🟥 **Screenshots** — faltam capturar
-🟨 **Repo GitHub público** — confirma que `VagnerBomJesus/stpquiz` está público
+🟥 **AAB ainda não construído**: precisas correr os comandos do ponto 1
+🟥 **Feature graphic 1024×500**: falta criar
+🟥 **Screenshots**: faltam capturar
+🟨 **Repo GitHub público**: confirma que `VagnerBomJesus/stp.quiz` está público
 
 Quando tiveres o AAB e os screenshots, **diz-me** e eu abro a Play Console
 contigo para fazer upload e preencher os formulários.

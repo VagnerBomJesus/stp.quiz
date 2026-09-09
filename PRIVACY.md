@@ -1,6 +1,6 @@
-# Política de Privacidade — STP Quiz
+# Política de Privacidade, STP Quiz
 
-**Última atualização:** Junho de 2026
+**Última atualização:** Setembro de 2026
 **Responsável pelo tratamento:** Vagner Bom Jesus
 **Contacto:** vagneripg@gmail.com
 
@@ -32,30 +32,37 @@ servidores externos.**
 A aplicação armazena localmente, no próprio dispositivo, os seguintes
 dados:
 
-- **Progresso dos quizzes** — número de respostas certas por categoria;
-- **Preferências de utilização** — tema (claro/escuro/sistema), idioma
+- **Progresso dos quizzes**: melhor resultado por tema e por nível;
+- **Estatísticas de jogo**: partidas concluídas, pontos, precisão e
+  histórico recente;
+- **Preferências**: tema (claro/escuro/sistema), idioma
   (PT/EN/FR/sistema), cores personalizadas (primária/secundária), filtro
-  de nível selecionado.
+  de nível, estado do onboarding e ativação das notificações.
 
 Estes dados são guardados através do mecanismo `SharedPreferences` do
-sistema operativo e **nunca são transmitidos para o exterior**.
+sistema operativo e **nunca são transmitidos para o exterior**. A
+aplicação não pede nome, email, localização, contactos ou qualquer outro
+dado pessoal identificável.
 
 ## 4. Finalidades
 
 Os dados acima são tratados apenas para:
 
 - permitir ao utilizador continuar os quizzes onde os deixou;
-- apresentar o progresso global no ecrã inicial;
+- apresentar o progresso global, as estatísticas e a revisão de respostas;
 - restaurar as preferências escolhidas pelo utilizador.
 
 ## 5. Base legal
 
-O tratamento descrito sustenta-se no **consentimento implícito** do
-utilizador (manifestado pela instalação e utilização da aplicação) e no
-**interesse legítimo** de proporcionar uma experiência funcional e
-contínua. O utilizador pode revogar o consentimento a qualquer momento,
-eliminando os dados através de **Definições > Limpar Cache** ou
-desinstalando a aplicação.
+O armazenamento local descrito é indispensável ao funcionamento da
+aplicação solicitada pelo utilizador (execução do serviço, artigo 6.º,
+n.º 1, alínea b), do RGPD) e assenta no **interesse legítimo** de
+proporcionar uma experiência funcional e contínua (alínea f)). Como nenhum
+dado chega ao responsável pelo tratamento, não é pedido consentimento nem
+existe qualquer transmissão. O utilizador pode eliminar todos os dados a
+qualquer momento em **Definições > Limpar Cache** ou desinstalando a
+aplicação. As notificações só são ativadas mediante permissão expressa
+concedida ao sistema operativo, revogável em Definições.
 
 ## 6. Conservação dos dados
 
@@ -71,12 +78,46 @@ terceiros**, incluindo parceiros publicitários, ferramentas de análise
 ou plataformas de marketing. A aplicação **não inclui redes de
 publicidade nem rastreadores comportamentais**.
 
-## 8. Permissões do dispositivo
+## 8. Notificações e permissões do dispositivo
 
-A aplicação **não solicita permissões sensíveis** (câmara, microfone,
-localização, contactos, calendário, ficheiros do utilizador, etc.). O
-acesso à internet só é usado durante o download da aplicação a partir
-da loja — a utilização da app não requer ligação.
+A funcionalidade **Curiosidade do Dia** pode enviar uma notificação local
+diária às 9h (hora local). As notificações são geradas e agendadas no
+próprio dispositivo, com conteúdo incorporado na aplicação, não existe
+qualquer servidor de notificações. Para tal, no Android 13 ou superior a
+aplicação solicita a permissão `POST_NOTIFICATIONS` e utiliza
+`RECEIVE_BOOT_COMPLETED` apenas para reagendar a notificação após um
+reinício. Podem ser desativadas em **Definições > Notificações**.
+
+Fora isso, a aplicação **não solicita permissões sensíveis** (câmara,
+microfone, localização, contactos, calendário, ficheiros do utilizador,
+etc.). A utilização da app não requer ligação à internet.
+
+## 8-A. Serviços de terceiros
+
+A aplicação não integra SDKs de publicidade, analytics ou redes sociais.
+Existem apenas duas interações com serviços do sistema ou da Google,
+ambas iniciadas pelo utilizador:
+
+- o pedido opcional de avaliação através da API **Google Play In-App
+  Review**, operado pela Google Play e sujeito à [Política de Privacidade
+  da Google](https://policies.google.com/privacy);
+- a partilha de curiosidades ou resultados através da **folha de partilha
+  do sistema operativo**, em que o conteúdo é entregue à aplicação que o
+  utilizador escolher.
+
+Em nenhum dos casos a STP Quiz envia dados para servidores próprios.
+
+## 8-B. Este website
+
+O site `vagnerbomjesus.github.io/stp.quiz` é uma página estática alojada no
+GitHub Pages. Não utiliza cookies, analytics, publicidade ou formulários.
+As fontes e os ícones são servidos a partir do próprio site, sem pedidos a
+terceiros. A única informação guardada no browser é a língua escolhida
+(PT/EN/FR), em `localStorage`, estritamente necessária para manter a
+preferência entre páginas. O alojamento é prestado pela GitHub, Inc., que
+pode registar dados técnicos de acesso (como o endereço IP) para segurança
+e operação do serviço, nos termos da sua declaração de privacidade. A STP
+Quiz não tem acesso a esses registos.
 
 ## 9. Segurança
 

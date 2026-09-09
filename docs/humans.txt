@@ -1,0 +1,16 @@
+/* TEAM */
+Autor / Developer: Vagner Bom Jesus
+Contacto: vagneripg@gmail.com
+GitHub: https://github.com/VagnerBomJesus
+Localização: Portugal / São Tomé e Príncipe
+
+/* THANKS */
+Fontes das perguntas: UNESCO, FAO, Banco Central de STP, Presidência da República de STP, Banco Mundial, Olympedia (lista completa dentro da app, em cada pergunta)
+Ilustrações de onboarding: Storyset
+
+/* SITE */
+Última atualização: 2026-09-09
+Idiomas: pt, en, fr
+Tecnologia do site: HTML, CSS e JavaScript sem dependências; fontes Poppins e Open Sans (OFL) e ícones Material Symbols (Apache 2.0) alojados localmente
+Tecnologia da app: Flutter / Dart, Material 3
+Alojamento: GitHub Pages

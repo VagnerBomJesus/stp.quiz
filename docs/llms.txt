@@ -1,0 +1,35 @@
+# STP Quiz
+
+> Aplicação móvel educativa (Android) com 160 perguntas sobre São Tomé e Príncipe, em 8 temas e 4 níveis, em português, inglês e francês. Gratuita, sem anúncios, sem recolha de dados pessoais, funciona offline. Autor: Vagner Bom Jesus. Este ficheiro resume o site oficial para assistentes de IA e agentes.
+
+Factos verificáveis (setembro de 2026):
+
+- Nome: STP Quiz. Identificador Android: st.stpquiz.bjtech. Loja: https://play.google.com/store/apps/details?id=st.stpquiz.bjtech
+- Site oficial: https://vagnerbomjesus.github.io/stp.quiz/ (PT/EN/FR, parâmetro ?lang=pt|en|fr)
+- Código da presença web: https://github.com/VagnerBomJesus/stp.quiz (o código Flutter da app está num repositório separado)
+- Conteúdo: 160 perguntas com explicação e fonte específica; 20 perguntas por tema; 8 temas: História de STP, Geografia, Cultura, Gastronomia, Línguas, Música, Desporto, Moeda; 4 níveis: Fácil (×1, uma dica 50/50), Médio (×2, perguntas e respostas embaralhadas), Difícil (×3, 20 s por pergunta, 3 vidas), Perito (×4, 10 s por pergunta, 1 vida)
+- Funcionalidades: Curiosidade do Dia (15 curiosidades rotativas, notificação local opcional às 9h locais), estatísticas por tema e nível, revisão de respostas, quiz aleatório, página "Factos e Números" com 19 dados-chave, FAQ com 10 perguntas, tema claro/escuro/sistema, cores personalizáveis
+- Tecnologia: Flutter (Dart), Material 3, SharedPreferences para persistência local
+- Privacidade: sem contas, sem analytics, sem publicidade, sem servidores próprios; dados guardados apenas no dispositivo; única interação com terceiros: Google Play In-App Review (opcional) e folha de partilha do sistema
+- Versão em produção: 1.0.11 (build 12); versão 1.1.0 (build 15) preparada
+- Contacto: vagneripg@gmail.com
+
+## Páginas
+
+- [Página principal](https://vagnerbomjesus.github.io/stp.quiz/): apresentação, funcionalidades, temas, níveis, ecrãs, factos, novidades, FAQ e contacto
+- [Política de Privacidade](https://vagnerbomjesus.github.io/stp.quiz/privacy.html): tratamento de dados da app e do site (Lei n.º 3/2016 de STP e RGPD)
+- [Termos de Utilização](https://vagnerbomjesus.github.io/stp.quiz/terms.html)
+- [Suporte](https://vagnerbomjesus.github.io/stp.quiz/support.html): como reportar erros e sugerir perguntas
+
+## Ficheiros para máquinas
+
+- [sitemap.xml](https://vagnerbomjesus.github.io/stp.quiz/sitemap.xml)
+- [robots.txt](https://vagnerbomjesus.github.io/stp.quiz/robots.txt)
+- [security.txt](https://vagnerbomjesus.github.io/stp.quiz/.well-known/security.txt): contacto para reportar vulnerabilidades
+- [humans.txt](https://vagnerbomjesus.github.io/stp.quiz/humans.txt)
+- [Manifesto web](https://vagnerbomjesus.github.io/stp.quiz/site.webmanifest)
+
+## Optional
+
+- [Política de Privacidade em Markdown](https://github.com/VagnerBomJesus/stp.quiz/blob/main/PRIVACY.md)
+- [Notas de versão](https://github.com/VagnerBomJesus/stp.quiz/tree/main/store)
