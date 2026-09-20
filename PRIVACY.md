@@ -1,6 +1,6 @@
 # Política de Privacidade, STP Quiz
 
-**Última atualização:** Setembro de 2026
+**Última atualização:** 20 de setembro de 2026
 **Responsável pelo tratamento:** Vagner Bom Jesus
 **Contacto:** vagneripg@gmail.com
 
@@ -23,9 +23,12 @@ que fundamento e durante quanto tempo.
 ## 2. Princípio da minimização
 
 A STP Quiz foi desenhada de raiz para tratar o mínimo de informação
-indispensável ao seu funcionamento. **Como regra geral, a aplicação não
-recolhe dados pessoais identificáveis nem comunica informação com
-servidores externos.**
+indispensável ao seu funcionamento. **O progresso dos quizzes e as
+preferências ficam apenas no dispositivo.** Desde a versão 1.2.0, um
+conjunto pequeno e delimitado de dados — um identificador anónimo, as
+respostas do início e, se assim o quiser, o endereço de email da conta
+Google — é guardado num servidor próprio, para que possa recuperar o seu
+perfil se mudar de telemóvel. Nada mais sai do dispositivo.
 
 ## 3. Dados tratados
 
@@ -41,8 +44,31 @@ dados:
 
 Estes dados são guardados através do mecanismo `SharedPreferences` do
 sistema operativo e **nunca são transmitidos para o exterior**. A
-aplicação não pede nome, email, localização, contactos ou qualquer outro
-dado pessoal identificável.
+aplicação não pede localização, contactos nem ficheiros.
+
+## 3-A. Dados tratados no servidor
+
+Desde a versão 1.2.0 a aplicação comunica com um servidor próprio,
+exclusivamente para os seguintes dados:
+
+- **Identificador anónimo**: um código gerado pela própria aplicação na
+  primeira utilização. Não é o identificador do aparelho nem está ligado à
+  sua identidade; reinstalar a aplicação gera outro;
+- **Respostas do início**: o nome que quiser dar (opcional), a razão por
+  que quer aprender, quanto diz saber sobre o país e a meta diária;
+- **Endereço de email**: apenas se escolher associar uma conta Google, e
+  apenas para o reconhecer quando entrar noutro telemóvel. Quem verifica a
+  identidade é a Google; a aplicação nunca vê nem guarda a sua
+  palavra-passe.
+
+O progresso dos quizzes, o histórico, a sequência de dias e as
+estatísticas de jogo **não** são enviados: continuam apenas no
+dispositivo. Os dados viajam sempre por ligação encriptada (HTTPS) e ficam
+alojados na Vercel, com as funções fixadas na região de Paris, e na
+MongoDB Atlas — subcontratantes que os tratam por nossa conta e segundo as
+nossas instruções. As estatísticas públicas da aplicação nunca incluem
+nomes e só mostram a distribuição das respostas a partir de dez
+respondentes.
 
 ## 4. Finalidades
 
@@ -66,10 +92,23 @@ concedida ao sistema operativo, revogável em Definições.
 
 ## 6. Conservação dos dados
 
-Os dados são mantidos enquanto a aplicação estiver instalada. A
-eliminação é imediata quando o utilizador toca em "Limpar Cache" ou
-desinstala a aplicação. **Não existem cópias remotas, cópias de
-segurança em nuvem nem registos no servidor.**
+Os dados guardados no dispositivo são mantidos enquanto a aplicação
+estiver instalada, e a eliminação é imediata quando o utilizador toca em
+"Limpar Cache" ou desinstala a aplicação. Os dados no servidor (secção
+3-A) são conservados enquanto a conta existir, e apagados quando o
+utilizador a apagar.
+
+## 6-A. Apagar a conta e os dados
+
+Em **Definições > Apagar conta e dados**, a aplicação elimina do servidor
+a conta e as respostas do início, desassocia a conta Google e limpa o
+perfil do telemóvel. A eliminação é definitiva e **não existem cópias de
+segurança** de onde recuperar os dados.
+
+Se já não tiver a aplicação instalada, pode pedir o mesmo em
+`https://vagnerbomjesus.github.io/stp.quiz/delete-account.html` ou por
+email para `vagneripg@gmail.com`, a partir do endereço da conta Google que
+associou; respondemos no prazo máximo de 30 dias.
 
 ## 7. Não partilha com terceiros
 
@@ -95,17 +134,20 @@ etc.). A utilização da app não requer ligação à internet.
 ## 8-A. Serviços de terceiros
 
 A aplicação não integra SDKs de publicidade, analytics ou redes sociais.
-Existem apenas duas interações com serviços do sistema ou da Google,
-ambas iniciadas pelo utilizador:
+Existem três interações com serviços do sistema ou da Google, todas
+iniciadas pelo utilizador:
 
 - o pedido opcional de avaliação através da API **Google Play In-App
-  Review**, operado pela Google Play e sujeito à [Política de Privacidade
-  da Google](https://policies.google.com/privacy);
+  Review**;
 - a partilha de curiosidades ou resultados através da **folha de partilha
   do sistema operativo**, em que o conteúdo é entregue à aplicação que o
-  utilizador escolher.
+  utilizador escolher;
+- o **Sign in with Google**, se escolher associar uma conta: nesse caso é
+  a Google que verifica a identidade e devolve à aplicação apenas a
+  confirmação de onde se extrai o email (secção 3-A).
 
-Em nenhum dos casos a STP Quiz envia dados para servidores próprios.
+As interações com serviços da Google estão sujeitas à [Política de
+Privacidade da Google](https://policies.google.com/privacy).
 
 ## 8-B. Este website
 
@@ -128,8 +170,13 @@ como o uso de bloqueio por código ou biométrico.
 
 ## 10. Transferências internacionais
 
-**Não ocorrem transferências internacionais de dados**, uma vez que o
-tratamento decorre exclusivamente no dispositivo do utilizador.
+Os dados guardados no dispositivo não são transferidos para lado nenhum.
+Os dados descritos na secção 3-A são tratados por subcontratantes: a API
+corre na Vercel, com as funções fixadas na região de Paris (União
+Europeia), e a base de dados está alojada na MongoDB Atlas. Quando o
+tratamento por estes fornecedores envolver países terceiros, é feito ao
+abrigo dos mecanismos previstos no capítulo V do RGPD, nomeadamente as
+cláusulas contratuais-tipo que constam dos respetivos contratos.
 
 ## 11. Direitos do titular
 
@@ -146,8 +193,10 @@ Democrática de São Tomé e Príncipe) e o **Regulamento (UE) 2016/679
 - retirar o consentimento, sem efeito retroactivo;
 - apresentar reclamação à autoridade de controlo competente.
 
-Para exercer estes direitos basta usar a opção **"Limpar Cache"** nas
-Definições ou contactar `vagneripg@gmail.com`.
+Para exercer estes direitos: **"Limpar Cache"** nas Definições apaga o
+progresso guardado no dispositivo; **"Apagar conta e dados"** elimina a
+conta e as respostas do servidor (secção 6-A). Para qualquer outro
+pedido, incluindo acesso e portabilidade, contacte `vagneripg@gmail.com`.
 
 ## 12. Menores
 
