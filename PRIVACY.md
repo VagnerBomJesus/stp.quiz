@@ -25,9 +25,9 @@ que fundamento e durante quanto tempo.
 A STP Quiz foi desenhada de raiz para tratar o mínimo de informação
 indispensável ao seu funcionamento. **O progresso dos quizzes e as
 preferências ficam apenas no dispositivo.** Desde a versão 1.2.0, um
-conjunto pequeno e delimitado de dados — um identificador anónimo, as
+conjunto pequeno e delimitado de dados (um identificador anónimo, as
 respostas do início e, se assim o quiser, o endereço de email da conta
-Google — é guardado num servidor próprio, para que possa recuperar o seu
+Google) é guardado num servidor próprio, para que possa recuperar o seu
 perfil se mudar de telemóvel. Nada mais sai do dispositivo.
 
 ## 3. Dados tratados
@@ -65,7 +65,7 @@ O progresso dos quizzes, o histórico, a sequência de dias e as
 estatísticas de jogo **não** são enviados: continuam apenas no
 dispositivo. Os dados viajam sempre por ligação encriptada (HTTPS) e ficam
 alojados na Vercel, com as funções fixadas na região de Paris, e na
-MongoDB Atlas — subcontratantes que os tratam por nossa conta e segundo as
+MongoDB Atlas, subcontratantes que os tratam por nossa conta e segundo as
 nossas instruções. As estatísticas públicas da aplicação nunca incluem
 nomes e só mostram a distribuição das respostas a partir de dez
 respondentes.
