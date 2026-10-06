@@ -53,7 +53,7 @@
           "https://vagnerbomjesus.github.io/stp.quiz/images/screens/06.webp",
           "https://vagnerbomjesus.github.io/stp.quiz/images/screens/09.webp"
         ],
-        "featureList": ["160 perguntas com explicação e fonte", "8 temas", "4 níveis com mecânicas próprias", "Curiosidade do Dia", "Estatísticas e revisão de respostas", "Funciona offline", "Sem anúncios", "Sem recolha de dados pessoais"],
+        "featureList": ["160 perguntas com explicação e fonte", "8 temas", "4 níveis com mecânicas próprias", "Curiosidade do Dia", "Estatísticas e revisão de respostas", "Funciona offline", "Sem anúncios", "Conta e sincronização opcionais"],
         "author": { "@id": "https://vagnerbomjesus.github.io/stp.quiz/#author" },
         "publisher": { "@id": "https://vagnerbomjesus.github.io/stp.quiz/#author" },
         "about": { "@type": "Country", "name": "São Tomé e Príncipe", "sameAs": "https://www.wikidata.org/wiki/Q1039" }
@@ -79,9 +79,9 @@
         "@id": "https://vagnerbomjesus.github.io/stp.quiz/#faq",
         "mainEntity": [
           { "@type": "Question", "name": "A aplicação é mesmo gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A STP Quiz é totalmente gratuita e não tem anúncios nem compras dentro da aplicação." } },
-          { "@type": "Question", "name": "Preciso de internet para jogar?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O conteúdo é local e funciona offline após a primeira abertura. Só precisas de internet para o download na Google Play." } },
-          { "@type": "Question", "name": "Onde fica guardado o meu progresso?", "acceptedAnswer": { "@type": "Answer", "text": "Apenas no teu dispositivo, através das preferências locais do Android. Nada é enviado para servidores externos." } },
-          { "@type": "Question", "name": "A STP Quiz recolhe os meus dados pessoais?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A aplicação não recolhe dados pessoais identificáveis, não tem contas nem analytics." } },
+          { "@type": "Question", "name": "Preciso de internet para jogar?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O quiz funciona sem ligação depois da primeira abertura. Com internet, as perguntas e as histórias atualizam-se e, se a ativares, o progresso sincroniza." } },
+          { "@type": "Question", "name": "Onde fica guardado o meu progresso?", "acceptedAnswer": { "@type": "Answer", "text": "No teu dispositivo. Se ativares a sincronização ou entrares com Google, o perfil e o progresso ficam também no servidor da STP Quiz, para os recuperares noutro telemóvel." } },
+          { "@type": "Question", "name": "A STP Quiz recolhe os meus dados pessoais?", "acceptedAnswer": { "@type": "Answer", "text": "Só o que escolheres: o perfil e o progresso, se ativares a sincronização ou entrares com Google, e estatísticas de uso anónimas, se aceitares. Os relatórios de erros técnicos não incluem nome, email nem conta." } },
           { "@type": "Question", "name": "Em que línguas está disponível?", "acceptedAnswer": { "@type": "Answer", "text": "Português, inglês e francês, ou a língua do sistema por defeito." } },
           { "@type": "Question", "name": "Como apago todo o meu progresso?", "acceptedAnswer": { "@type": "Answer", "text": "Em Definições > Limpar Cache. Desinstalar a aplicação tem o mesmo efeito." } }
         ]
@@ -528,9 +528,9 @@
     <div>
       <h2 class="section-title" data-i18n="why.title">Porquê a<br />STP Quiz</h2>
       <div class="num-list">
-        <div class="num-item"><div class="n">01</div><div><h3 data-i18n="why.1.t">Privacidade primeiro</h3><p data-i18n="why.1.d">Sem contas, sem analytics, sem publicidade. O progresso fica só no teu dispositivo e nada é enviado para servidores externos.</p></div></div>
+        <div class="num-item"><div class="n">01</div><div><h3 data-i18n="why.1.t">Privacidade primeiro</h3><p data-i18n="why.1.d">Sem anúncios. A conta e a sincronização são opcionais. Os relatórios de erros não levam nome, email nem conta, e as estatísticas de uso só com o teu consentimento.</p></div></div>
         <div class="num-item"><div class="n">02</div><div><h3 data-i18n="why.2.t">Totalmente gratuita</h3><p data-i18n="why.2.d">Sem subscrições nem compras dentro da app. Todos os temas e níveis estão desbloqueados desde o primeiro toque.</p></div></div>
-        <div class="num-item"><div class="n">03</div><div><h3 data-i18n="why.3.t">Funciona offline</h3><p data-i18n="why.3.d">Todo o conteúdo é local. Só precisas de internet para instalar a aplicação a partir da Google Play.</p></div></div>
+        <div class="num-item"><div class="n">03</div><div><h3 data-i18n="why.3.t">Funciona offline</h3><p data-i18n="why.3.d">Joga-se sem internet. Quando há rede, as perguntas e as histórias atualizam-se sozinhas.</p></div></div>
         <div class="num-item"><div class="n">04</div><div><h3 data-i18n="why.4.t">Conteúdo com fontes</h3><p data-i18n="why.4.d">Cada pergunta traz explicação e fonte específica, em português, inglês e francês, para aprenderes mesmo quando erras.</p></div></div>
       </div>
     </div>
@@ -684,9 +684,9 @@
     <h2 class="section-title center" data-i18n="faq.title">Perguntas frequentes</h2>
     <div class="faq">
       <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1"><span data-i18n="faq.q1">A aplicação é mesmo gratuita?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><div><p data-i18n="faq.a1">Sim. A STP Quiz é totalmente gratuita e não tem anúncios nem compras dentro da aplicação. Tudo está disponível desde o primeiro arranque.</p></div></div></div>
-      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span data-i18n="faq.q2">Preciso de internet para jogar?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p data-i18n="faq.a2">Não. O conteúdo dos quizzes é local e funciona sem ligação à internet após a primeira abertura. Só precisas de internet para o download na Google Play.</p></div></div></div>
-      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span data-i18n="faq.q3">Onde fica guardado o meu progresso?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p data-i18n="faq.a3">Apenas no teu dispositivo, através do mecanismo de preferências locais do Android. Nada é enviado para servidores externos.</p></div></div></div>
-      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span data-i18n="faq.q4">A STP Quiz recolhe os meus dados pessoais?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p data-i18n="faq.a4">Não. A aplicação não recolhe dados pessoais identificáveis, não tem contas nem analytics. Vê os detalhes na <a href="privacy.html">Política de Privacidade</a>.</p></div></div></div>
+      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2"><span data-i18n="faq.q2">Preciso de internet para jogar?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><div><p data-i18n="faq.a2">Não. O quiz funciona sem ligação depois da primeira abertura. Com internet, as perguntas e as histórias atualizam-se e, se a ativares, o progresso sincroniza.</p></div></div></div>
+      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3"><span data-i18n="faq.q3">Onde fica guardado o meu progresso?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><div><p data-i18n="faq.a3">No teu dispositivo. Se ativares a sincronização ou entrares com Google, o perfil e o progresso ficam também no servidor da STP Quiz, para os recuperares noutro telemóvel.</p></div></div></div>
+      <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4"><span data-i18n="faq.q4">A STP Quiz recolhe os meus dados pessoais?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div><p data-i18n="faq.a4">Só o que escolheres: o perfil e o progresso, se ativares a sincronização ou entrares com Google, e estatísticas de uso anónimas, se aceitares. Os relatórios de erros técnicos não incluem nome, email nem conta. Vê os detalhes na <a href="privacy.html">Política de Privacidade</a>.</p></div></div></div>
       <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5"><span data-i18n="faq.q5">Em que línguas está disponível?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><div><p data-i18n="faq.a5">Português, inglês e francês (ou a língua do sistema, por defeito). A escolha pode ser alterada dentro da app, em Definições.</p></div></div></div>
       <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a6" id="faq-q6"><span data-i18n="faq.q6">Como apago todo o meu progresso?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div><p data-i18n="faq.a6">Dentro da app vai a Definições &gt; Limpar Cache. A ação remove todos os resultados guardados. Desinstalar a aplicação tem o mesmo efeito.</p></div></div></div>
       <div class="faq-item" data-open="false"><h3><button class="faq-q" aria-expanded="false" aria-controls="faq-a7" id="faq-q7"><span data-i18n="faq.q7">Posso sugerir perguntas ou correções?</span><span class="plus" aria-hidden="true">+</span></button></h3><div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div><p data-i18n="faq.a7">Sim! Envia para <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>, sempre que possível com a fonte, para a informação poder ser validada.</p></div></div></div>
@@ -730,7 +730,7 @@
 <section class="final" id="download">
   <div class="container">
     <h2 data-i18n="final.title">Descarrega já</h2>
-    <p data-i18n="final.sub">Grátis, sem anúncios e sem dados pessoais. Apenas conhecimento sobre um dos países mais bonitos do Golfo da Guiné.</p>
+    <p data-i18n="final.sub">Grátis e sem anúncios. Apenas conhecimento sobre um dos países mais bonitos do Golfo da Guiné.</p>
     <div class="cta-row">
       <a class="play-badge" href="https://play.google.com/store/apps/details?id=st.stpquiz.bjtech" target="_blank" rel="noopener"><img src="images/en_badge_web_generic_google_play.png" alt="Disponível no Google Play" data-i18n-alt="hero.play" /></a>
     </div>
@@ -778,9 +778,9 @@
       'hero.play': 'Get it on Google Play', 'hero.cta': 'See features',
       'stat.questions': 'Questions', 'stat.topics': 'Topics', 'stat.levels': 'Levels', 'stat.langs': 'Languages',
       'why.title': 'Why<br />STP Quiz',
-      'why.1.t': 'Privacy first', 'why.1.d': 'No accounts, no analytics, no ads. Your progress stays on your device and nothing is sent to external servers.',
+      'why.1.t': 'Privacy first', 'why.1.d': 'No ads. Accounts and sync are optional. Error reports carry no name, email or account, and usage statistics are only sent with your consent.',
       'why.2.t': 'Completely free', 'why.2.d': 'No subscriptions or in-app purchases. Every topic and level is unlocked from the first tap.',
-      'why.3.t': 'Works offline', 'why.3.d': 'All content is local. You only need internet to install the app from Google Play.',
+      'why.3.t': 'Works offline', 'why.3.d': 'Play without internet. When you are online, questions and stories update on their own.',
       'why.4.t': 'Sourced content', 'why.4.d': 'Every question comes with an explanation and a specific source, in Portuguese, English and French, so you learn even when you miss.',
       'feat.title': 'Application<br />features',
       'feat.1.t': 'Fact of the Day', 'feat.1.d': 'A new fact about São Tomé and Príncipe every day on the home screen, with an optional 9 a.m. (local time) notification and one-tap sharing.',
@@ -816,15 +816,15 @@
       'news.4': 'Edge-to-edge layout on Android 15 and a smaller download.',
       'faq.title': 'Frequently asked questions',
       'faq.q1': 'Is the app really free?', 'faq.a1': 'Yes. STP Quiz is completely free, with no ads and no in-app purchases. Everything is available from the first launch.',
-      'faq.q2': 'Do I need internet to play?', 'faq.a2': 'No. Quiz content is local and works without a connection after the first launch. You only need internet for the Google Play download.',
-      'faq.q3': 'Where is my progress stored?', 'faq.a3': 'Only on your device, through Android\'s local preferences. Nothing is sent to external servers.',
-      'faq.q4': 'Does STP Quiz collect my personal data?', 'faq.a4': 'No. The app does not collect personally identifiable data and has no accounts or analytics. See the details in the <a href="privacy.html">Privacy Policy</a>.',
+      'faq.q2': 'Do I need internet to play?', 'faq.a2': 'No. The quiz works without a connection after the first launch. With internet, questions and stories update and, if you turn it on, your progress syncs.',
+      'faq.q3': 'Where is my progress stored?', 'faq.a3': 'On your device. If you turn on sync or sign in with Google, your profile and progress are also stored on the STP Quiz server, so you can recover them on another phone.',
+      'faq.q4': 'Does STP Quiz collect my personal data?', 'faq.a4': 'Only what you choose: your profile and progress, if you turn on sync or sign in with Google, and anonymous usage statistics, if you agree. Technical error reports include no name, email or account. See the details in the <a href="privacy.html">Privacy Policy</a>.',
       'faq.q5': 'Which languages are available?', 'faq.a5': 'Portuguese, English and French (or the system language by default). You can change it inside the app, under Settings.',
       'faq.q6': 'How do I delete all my progress?', 'faq.a6': 'In the app go to Settings &gt; Clear Cache. This removes all saved results. Uninstalling the app has the same effect.',
       'faq.q7': 'Can I suggest questions or corrections?', 'faq.a7': 'Yes! Send them to <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>, with the source whenever possible, so the information can be validated.',
       'contact.title': 'Contact', 'contact.play': 'STP Quiz on Google Play',
       'author.role': 'Developer · App author', 'author.bio': 'A personal project to promote São Tomé and Príncipe and deepen mobile development with Flutter, with care for design and privacy.',
-      'final.title': 'Download now', 'final.sub': 'Free, no ads and no personal data. Just knowledge about one of the most beautiful countries in the Gulf of Guinea.',
+      'final.title': 'Download now', 'final.sub': 'Free and ad-free. Just knowledge about one of the most beautiful countries in the Gulf of Guinea.',
       'footer.made': 'Made with', 'footer.by': 'by', 'footer.privacy': 'Privacy', 'footer.terms': 'Terms', 'footer.support': 'Support'
     },
     fr: {
@@ -837,9 +837,9 @@
       'hero.play': 'Disponible sur Google Play', 'hero.cta': 'Voir les fonctionnalités',
       'stat.questions': 'Questions', 'stat.topics': 'Thèmes', 'stat.levels': 'Niveaux', 'stat.langs': 'Langues',
       'why.title': 'Pourquoi<br />STP Quiz',
-      'why.1.t': 'Confidentialité d\'abord', 'why.1.d': 'Pas de compte, pas d\'analytics, pas de publicité. Votre progression reste sur votre appareil et rien n\'est envoyé à des serveurs externes.',
+      'why.1.t': 'Confidentialité d\'abord', 'why.1.d': 'Pas de publicité. Le compte et la synchronisation sont facultatifs. Les rapports d’erreurs ne contiennent ni nom, ni e-mail, ni compte, et les statistiques d’utilisation ne sont envoyées qu’avec votre consentement.',
       'why.2.t': 'Totalement gratuite', 'why.2.d': 'Sans abonnement ni achats intégrés. Tous les thèmes et niveaux sont débloqués dès le premier geste.',
-      'why.3.t': 'Fonctionne hors ligne', 'why.3.d': 'Tout le contenu est local. Internet n\'est nécessaire que pour installer l\'application depuis Google Play.',
+      'why.3.t': 'Fonctionne hors ligne', 'why.3.d': 'On joue sans internet. Quand vous êtes connecté, les questions et les histoires se mettent à jour toutes seules.',
       'why.4.t': 'Contenu sourcé', 'why.4.d': 'Chaque question est accompagnée d\'une explication et d\'une source précise, en portugais, anglais et français, pour apprendre même en se trompant.',
       'feat.title': 'Fonctionnalités<br />de l\'application',
       'feat.1.t': 'Info du Jour', 'feat.1.d': 'Une nouvelle curiosité sur São Tomé-et-Príncipe chaque jour sur l\'accueil, avec notification facultative à 9 h (heure locale) et partage en un geste.',
@@ -875,15 +875,15 @@
       'news.4': 'Affichage bord à bord sur Android 15 et téléchargement allégé.',
       'faq.title': 'Questions fréquentes',
       'faq.q1': 'L\'application est-elle vraiment gratuite ?', 'faq.a1': 'Oui. STP Quiz est totalement gratuite, sans publicité ni achats intégrés. Tout est disponible dès le premier lancement.',
-      'faq.q2': 'Ai-je besoin d\'internet pour jouer ?', 'faq.a2': 'Non. Le contenu des quiz est local et fonctionne sans connexion après la première ouverture. Internet n\'est nécessaire que pour le téléchargement sur Google Play.',
-      'faq.q3': 'Où est stockée ma progression ?', 'faq.a3': 'Uniquement sur votre appareil, via les préférences locales d\'Android. Rien n\'est envoyé à des serveurs externes.',
-      'faq.q4': 'STP Quiz collecte-t-elle mes données personnelles ?', 'faq.a4': 'Non. L\'application ne collecte aucune donnée personnelle identifiable, sans compte ni analytics. Voir la <a href="privacy.html">Politique de confidentialité</a>.',
+      'faq.q2': 'Ai-je besoin d\'internet pour jouer ?', 'faq.a2': 'Non. Le quiz fonctionne sans connexion après la première ouverture. Avec internet, les questions et les histoires se mettent à jour et, si vous l’activez, votre progression se synchronise.',
+      'faq.q3': 'Où est stockée ma progression ?', 'faq.a3': 'Sur votre appareil. Si vous activez la synchronisation ou vous connectez avec Google, votre profil et votre progression sont aussi conservés sur le serveur de STP Quiz, pour les récupérer sur un autre téléphone.',
+      'faq.q4': 'STP Quiz collecte-t-elle mes données personnelles ?', 'faq.a4': 'Seulement ce que vous choisissez : votre profil et votre progression, si vous activez la synchronisation ou vous connectez avec Google, et des statistiques d’utilisation anonymes, si vous acceptez. Les rapports d’erreurs techniques n’incluent ni nom, ni e-mail, ni compte. Voir la <a href="privacy.html">Politique de confidentialité</a>.',
       'faq.q5': 'En quelles langues est-elle disponible ?', 'faq.a5': 'Portugais, anglais et français (ou la langue du système par défaut). Le choix se change dans l\'app, dans Paramètres.',
       'faq.q6': 'Comment supprimer toute ma progression ?', 'faq.a6': 'Dans l\'app, allez dans Paramètres &gt; Vider le cache. Cela supprime tous les résultats enregistrés. Désinstaller l\'application a le même effet.',
       'faq.q7': 'Puis-je proposer des questions ou des corrections ?', 'faq.a7': 'Oui ! Envoyez-les à <a href="mailto:vagneripg@gmail.com">vagneripg@gmail.com</a>, si possible avec la source, pour que l\'information puisse être validée.',
       'contact.title': 'Contact', 'contact.play': 'STP Quiz sur Google Play',
       'author.role': 'Développeur · Auteur de l\'app', 'author.bio': 'Projet personnel pour promouvoir São Tomé-et-Príncipe et approfondir le développement mobile avec Flutter, avec soin pour le design et la confidentialité.',
-      'final.title': 'Téléchargez', 'final.sub': 'Gratuit, sans publicité et sans données personnelles. Juste du savoir sur l\'un des plus beaux pays du golfe de Guinée.',
+      'final.title': 'Téléchargez', 'final.sub': 'Gratuit et sans publicité. Juste du savoir sur l’un des plus beaux pays du golfe de Guinée.',
       'footer.made': 'Fait avec', 'footer.by': 'par', 'footer.privacy': 'Confidentialité', 'footer.terms': 'Conditions', 'footer.support': 'Support'
     }
   };
